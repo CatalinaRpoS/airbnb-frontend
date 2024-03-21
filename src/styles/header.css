@@ -4,7 +4,7 @@
 header {
   margin-top: 0 auto;
   font-family: "Open Sans", sans-serif;
-  font-size: 1rem;
+  font-size: 0.99rem;
   color: #717171;
 }
 
@@ -17,3 +17,12 @@ header {
   padding-left: 0.45em;
   font-family: "Poppins", sans-serif;
 }
+.boton{
+  background-color: #ff385c;
+}
+
+.buscar{
+  margin: 0 auto;
+  font-size: 0.875rem;
+}
+
