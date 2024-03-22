@@ -30,13 +30,13 @@ const Footer = () => {
                 <div className="flex">
                     <div className="flex mx-2">© 2024 Airbnb, Inc.</div>
                     <span>·</span>
-                    <div className="flex mx-2">Privacidad</div>
+                    <a className="flex mx-2 hover:underline" href="https://www.airbnb.com.co/help/article/2855">Privacidad</a>
                     <span>·</span>
-                    <div className="flex mx-2">Términos</div>
+                    <a className="flex mx-2 hover:underline" href="https://www.airbnb.com.co/help/article/2908">Términos</a>
                     <span>·</span>
-                    <div className="flex mx-2">Mapa del sitio</div>
+                    <a className="flex mx-2 hover:underline" href="https://www.airbnb.com.co/sitemaps/v2">Mapa del sitio</a>
                     <span>·</span>
-                    <div className="flex mx-2">Datos de la empresa</div>
+                    <a className="flex mx-2 hover:underline" href="https://www.airbnb.com.co/about/company-details">Datos de la empresa</a>
                 </div>
                 <div>
                     <div className="flex items-center">
