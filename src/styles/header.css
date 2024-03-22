@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 header {
-  margin-top: 0 auto;
   font-family: "Open Sans", sans-serif;
   font-size: 0.99rem;
   color: #717171;
@@ -17,11 +16,11 @@ header {
   padding-left: 0.45em;
   font-family: "Poppins", sans-serif;
 }
-.boton{
+.magnifying_glass {
   background-color: #ff385c;
 }
 
-.buscar{
+.search {
   margin: 0 auto;
   font-size: 0.875rem;
 }
