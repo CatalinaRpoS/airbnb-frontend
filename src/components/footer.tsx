@@ -8,43 +8,137 @@ import instagram from "../assets/instagram.svg";
 const Footer = () => {
     return (
         <footer className="bg-white">
-            <section>
+            <section className="p-10">
+                <div>
+                    <p className="font-semibold text-lg">Inspiración para escapadas futuras</p>
+                </div>
+                <div className="mt-5 pb-5">
+                    <ul className="list-none flex">
+                        <li className="mr-4 active:font-semibold hover:cursor-pointer">Popular</li>
+                        <li className="mr-4 active:font-semibold hover:cursor-pointer">Arte y cultura</li>
+                        <li className="mr-4 active:font-semibold hover:cursor-pointer">Al aire libre</li>
+                        <li className="mr-4 active:font-semibold hover:cursor-pointer">Montañas</li>
+                        <li className="mr-4 active:font-semibold hover:cursor-pointer">Playa</li>
+                        <li className="mr-4 active:font-semibold hover:cursor-pointer">Categorías</li>
+                        <li className="mr-4 active:font-semibold hover:cursor-pointer">Actividades</li>
+                    </ul>
+                </div>
+                <div>
+                <hr />
+                <div className="grid grid-cols-6 pt-5 gap-4">
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Canmore</p>
+                        <p>Chalés vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Benalmádena</p>
+                        <p>Casas vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Marbella</p>
+                        <p>Casas de campo vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Mijas</p>
+                        <p>Casas vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Prescott</p>
+                        <p>Casas vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Scottdale</p>
+                        <p>Mansiones vacacionales</p>
+                    </div>
 
+                    {/* fila 2 */}
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Tucson</p>
+                        <p>Mansiones vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Jasper</p>
+                        <p>Cabañas vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Mountain View</p>
+                        <p>Casas vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Devon port</p>
+                        <p>Alquileres vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Mallacoota</p>
+                        <p>Casas vacacionales en la playa</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Ibiza</p>
+                        <p>Alquileres vacacionales</p>
+                    </div>
+                   
+
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Anaheim</p>
+                        <p>Casas vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Monterey</p>
+                        <p>Condominios vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Paso Robles</p>
+                        <p>Casas vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Santa Bárbara</p>
+                        <p>Alojamientos vacacionales</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Sonoma</p>
+                        <p>Casas vacacionales en la playa</p>
+                    </div>
+                    <div className="col-span-1 hover:cursor-pointer">
+                        <p className="font-semibold">Mostrar más ▼</p>
+                    </div>
+                </div>
+
+                </div>
             </section>
             <br />
             <hr />
 
-            <section className="grid grid-cols-3 justify-around p-5 lg:px-8">
+            <section className="grid grid-cols-3 justify-around p-10 lg:px-8">
                 <div className="col-span-1">
                     <p className="font-semibold">Asistencia</p>
                     <ul className="grid grid-cols-1 justify-around">
-                    <li className="py-3">Centro de ayuda</li>
-                    <li className="pb-3">AirCover</li>
-                    <li className="pb-3">Antidiscriminación</li>
-                    <li className="pb-3">Apoyo para discapacitados</li>
-                    <li className="pb-3">Problemas de cancelación</li>
-                    <li className="pb-3">Problemas de vecindario</li>
+                    <li className="py-3 hover:underline">Centro de ayuda</li>
+                    <li className="pb-3 hover:underline">AirCover</li>
+                    <li className="pb-3 hover:underline">Antidiscriminación</li>
+                    <li className="pb-3 hover:underline">Apoyo para discapacitados</li>
+                    <li className="pb-3 hover:underline">Problemas de cancelación</li>
+                    <li className="pb-3 hover:underline">Problemas de vecindario</li>
                     </ul>
                 </div>
                 <div className="col-span-1">
                     <p className="font-semibold">Modo anfitrión</p>
                     <ul className="grid grid-cols-1 justify-around">
-                    <li className="py-3">Pon tu espacio en Airbnb</li>
-                    <li className="pb-3">AirCover para anfitriones</li>
-                    <li className="pb-3">Recursos para anfitrionar</li>
-                    <li className="pb-3">Foro comunitario</li>
-                    <li className="pb-3">Anfitriona con responsabilidad</li>
-                    <li className="pb-3">Súmate a una clase gratuita sobre la actividad de los anfitriones</li>
+                    <li className="py-3 hover:underline">Pon tu espacio en Airbnb</li>
+                    <li className="pb-3 hover:underline">AirCover para anfitriones</li>
+                    <li className="pb-3 hover:underline">Recursos para anfitrionar</li>
+                    <li className="pb-3 hover:underline">Foro comunitario</li>
+                    <li className="pb-3 hover:underline">Anfitriona con responsabilidad</li>
+                    <li className="pb-3 hover:underline">Súmate a una clase gratuita sobre la actividad de los anfitriones</li>
                     </ul>
                 </div>
                 <div className="col-span-1">
                     <p className="font-semibold">Airbnb</p>
                     <ul className="grid grid-cols-1 justify-around">
-                    <li className="py-3">Sala de prensa</li>
-                    <li className="pb-3">Funciones nuevas</li>
-                    <li className="pb-3">Carreras</li>
-                    <li className="pb-3">Inversionistas</li>
-                    <li className="pb-3">Espacios de Airbnb.org</li>
+                    <li className="py-3 hover:underline">Sala de prensa</li>
+                    <li className="pb-3 hover:underline">Funciones nuevas</li>
+                    <li className="pb-3 hover:underline">Carreras</li>
+                    <li className="pb-3 hover:underline">Inversionistas</li>
+                    <li className="pb-3 hover:underline">Espacios de Airbnb.org</li>
                     </ul>
                 </div>
             </section>

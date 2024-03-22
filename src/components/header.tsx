@@ -103,7 +103,7 @@ const Header = () =>{
             <img className="h-4 w-auto"
                  src={magnifying_glass}
                  alt="Buscar" />
-            <p className="hidden magnifying_glass-texto h-8 w-8 flex items-center justify-end text-white font-semibold">Buscar</p>
+            <p className="hidden magnifying_glass-texto h-8 w-8 items-center justify-end text-white font-semibold">Buscar</p>
           </div>
         </button>
       </div>
