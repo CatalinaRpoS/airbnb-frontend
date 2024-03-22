@@ -13,17 +13,42 @@ const Footer = () => {
             </section>
             <br />
             <hr />
-            <section className="flex justify-around p-4 lg:px-8">
-                <div>
+
+            <section className="grid grid-cols-3 justify-around p-5 lg:px-8">
+                <div className="col-span-1">
                     <p className="font-semibold">Asistencia</p>
+                    <ul className="grid grid-cols-1 justify-around">
+                    <li className="py-3">Centro de ayuda</li>
+                    <li className="pb-3">AirCover</li>
+                    <li className="pb-3">Antidiscriminación</li>
+                    <li className="pb-3">Apoyo para discapacitados</li>
+                    <li className="pb-3">Problemas de cancelación</li>
+                    <li className="pb-3">Problemas de vecindario</li>
+                    </ul>
                 </div>
-                <div>
+                <div className="col-span-1">
                     <p className="font-semibold">Modo anfitrión</p>
+                    <ul className="grid grid-cols-1 justify-around">
+                    <li className="py-3">Pon tu espacio en Airbnb</li>
+                    <li className="pb-3">AirCover para anfitriones</li>
+                    <li className="pb-3">Recursos para anfitrionar</li>
+                    <li className="pb-3">Foro comunitario</li>
+                    <li className="pb-3">Anfitriona con responsabilidad</li>
+                    <li className="pb-3">Súmate a una clase gratuita sobre la actividad de los anfitriones</li>
+                    </ul>
                 </div>
-                <div>
+                <div className="col-span-1">
                     <p className="font-semibold">Airbnb</p>
+                    <ul className="grid grid-cols-1 justify-around">
+                    <li className="py-3">Sala de prensa</li>
+                    <li className="pb-3">Funciones nuevas</li>
+                    <li className="pb-3">Carreras</li>
+                    <li className="pb-3">Inversionistas</li>
+                    <li className="pb-3">Espacios de Airbnb.org</li>
+                    </ul>
                 </div>
             </section>
+
             <br />
             <hr />
             <section className="flex justify-between p-4 lg:px-8">
