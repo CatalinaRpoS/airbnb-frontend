@@ -1,0 +1,6 @@
+
+.item {
+    min-width: 30px; /* Tamaño máximo de la imagen */
+    margin-bottom: 10px; /* Espacio entre la imagen y el texto */
+    margin-right: 0px;
+}

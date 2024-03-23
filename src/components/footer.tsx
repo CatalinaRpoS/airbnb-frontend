@@ -7,12 +7,12 @@ import instagram from "../assets/instagram.svg";
 
 const Footer = () => {
     return (
-        <footer className="bg-white">
+        <footer className="bg-slate-50">
             <section className="p-10">
                 <div>
-                    <p className="font-semibold text-lg">Inspiración para escapadas futuras</p>
+                    <p className="font-semibold text-2xl">Inspiración para escapadas futuras</p>
                 </div>
-                <div className="mt-5 pb-5">
+                <div className="mt-4 pb-5">
                     <ul className="list-none flex">
                         <li className="mr-4 active:font-semibold hover:cursor-pointer">Popular</li>
                         <li className="mr-4 active:font-semibold hover:cursor-pointer">Arte y cultura</li>
