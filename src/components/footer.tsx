@@ -125,37 +125,57 @@ const Footer: React.FC = () => {
         <div className="col-span-1">
           <p className="font-semibold">Asistencia</p>
           <ul className="grid grid-cols-1 justify-around">
-            <li className="py-3 hover:underline">Centro de ayuda</li>
-            <li className="pb-3 hover:underline">AirCover</li>
-            <li className="pb-3 hover:underline">Antidiscriminación</li>
-            <li className="pb-3 hover:underline">Apoyo para discapacitados</li>
-            <li className="pb-3 hover:underline">Problemas de cancelación</li>
-            <li className="pb-3 hover:underline">Problemas de vecindario</li>
+            <li className="py-3 hover:underline">
+              <a href="https://www.airbnb.com.co/help/home?from=footer">Centro de ayuda</a>
+            </li>
+            <li className="pb-3 hover:underline"><a href="https://www.airbnb.com.co/aircover">AirCover</a></li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/against-discrimination">Antidiscriminación</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/accessibility">Apoyo para discapacitados</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19">Opciones de cancelación</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/neighbors">Problemas de vecindario</a>
+            </li>
           </ul>
         </div>
         <div className="col-span-1">
           <p className="font-semibold">Modo anfitrión</p>
           <ul className="grid grid-cols-1 justify-around">
-            <li className="py-3 hover:underline">Pon tu espacio en Airbnb</li>
-            <li className="pb-3 hover:underline">AirCover para anfitriones</li>
-            <li className="pb-3 hover:underline">Recursos para anfitrionar</li>
-            <li className="pb-3 hover:underline">Foro comunitario</li>
-            <li className="pb-3 hover:underline">
-              Anfitriona con responsabilidad
+            <li className="py-3 hover:underline">
+              <a href="https://www.airbnb.com.co/host/homes?from_footer=1">Pon tu espacio en Airbnb</a>
             </li>
             <li className="pb-3 hover:underline">
-              Súmate a una clase gratuita sobre la actividad de los anfitriones
+              <a href="https://www.airbnb.com.co/aircover-for-hosts">AirCover para anfitriones</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/resources">Recursos para anfitrionar</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/help/community?s=footer">Foro comunitario</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/help/responsible-hosting">Anfitriona con responsabilidad</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/ambassadors/joinaclass">Súmate a una clase gratuita sobre la actividad de los anfitriones</a>
             </li>
           </ul>
         </div>
         <div className="col-span-1">
           <p className="font-semibold">Airbnb</p>
           <ul className="grid grid-cols-1 justify-around">
-            <li className="py-3 hover:underline">Sala de prensa</li>
-            <li className="pb-3 hover:underline">Funciones nuevas</li>
-            <li className="pb-3 hover:underline">Carreras</li>
-            <li className="pb-3 hover:underline">Inversionistas</li>
-            <li className="pb-3 hover:underline">Espacios de Airbnb.org</li>
+            <li className="py-3 hover:underline"><a href="https://www.airbnb.com.co/press/news">Sala de prensa</a></li>
+            <li className="pb-3 hover:underline"><a href="https://www.airbnb.com.co/release">Funciones nuevas</a></li>
+            <li className="pb-3 hover:underline"><a href="https://www.airbnb.com.co/careers">Carreras</a></li>
+            <li className="pb-3 hover:underline"><a href="https://investors.airbnb.com/">Inversionistas</a></li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.org/?locale=es-XL">Espacios de Airbnb.org</a>
+            </li>
           </ul>
         </div>
       </section>

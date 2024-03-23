@@ -24,7 +24,7 @@ const Items: React.FC = () => {
 
   return (
     <div
-      className="relative p-3 w-64 h-auto"
+      className="relative p-3 w-64 lg:w-80 h-auto"
       onMouseEnter={() => setShowArrows(true)}
       onMouseLeave={() => setShowArrows(false)}
     >
