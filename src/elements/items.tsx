@@ -27,7 +27,7 @@ const Items = () => {
                 {showArrows && (
                     <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-2">
                         {images.map((_, index) => (
-                            <div key={index} className={`h-2 w-2 rounded-full mx-1 ${index === currentImageIndex ? 'bg-black' : 'bg-gray-300'}`}></div>
+                            <div key={index} className={`h-2 w-2 rounded-full mx-1 ${index === currentImageIndex ? 'bg-white' : 'bg-gray-300'}`}></div>
                         ))}
                     </div>
                 )}
