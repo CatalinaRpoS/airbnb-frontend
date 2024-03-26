@@ -6,6 +6,7 @@ import profile from "../assets/profile.svg";
 import magnifying_glass from "../assets/magnifying_glass.svg";
 import strokes from "../assets/strokes.svg";
 
+
 const Header: React.FC = () => {
   useEffect(() => {
     const hideSearchButton = (event: MouseEvent) => {
@@ -119,10 +120,10 @@ const Header: React.FC = () => {
             Dónde
           </p>
           <input
-            type="text"
+            type="form"
             placeholder="Explora destinos"
-            className="modify-button bg-transparent border-none focus:outline-none"
-          />
+            className="modify-button bg-transparent border-none focus:outline-none">
+          </input>
         </button>
         <p className="font-bold flex items-center">|</p>
         <button

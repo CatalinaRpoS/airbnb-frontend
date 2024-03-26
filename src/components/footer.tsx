@@ -3,6 +3,7 @@ import world from "../assets/world.svg";
 import facebook from "../assets/facebook.svg";
 import twitter from "../assets/twitter.svg";
 import instagram from "../assets/instagram.svg";
+import arrowd from "../assets/arrow_do.svg";
 
 const Footer: React.FC = () => {
   const highlightText = (id: number) => {
@@ -155,7 +156,10 @@ const Footer: React.FC = () => {
               <p>Casas vacacionales en la playa</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Mostrar más ▼</p>
+              <div className="flex">
+               <p className="text-black font-semibold m-2">Mostrar más</p>
+               <img className="h-3 w-3 mt-3" src={arrowd} alt="Mas opciones" />
+              </div>
             </div>
           </div>
         </div>

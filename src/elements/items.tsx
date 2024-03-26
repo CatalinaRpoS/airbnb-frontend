@@ -1,16 +1,13 @@
 import { useState } from "react";
-import playa1 from "../assets/playa1.png";
-import playa2 from "../assets/playa2.png";
-import playa3 from "../assets/playa3.png";
-import playa4 from "../assets/playa4.png";
 import arrowl from "../assets/arrow_le.svg";
 import arrowr from "../assets/arrow_ri.svg";
+import like from "../assets/like.svg";
 import "../styles/items.css";
 
 const Items: React.FC = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [showArrows, setShowArrows] = useState(false);
-  const images = [playa1, playa2, playa3, playa4];
+  const images = ["https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/defd5cac-2763-44d4-bbdd-9f7a59c2359d.jpeg?im_w=960", "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/3a46cf50-b38c-488a-81ce-69f270f46eb3.jpeg?im_w=720", "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/85236caf-c35e-41af-89a4-87402fab6bc3.jpeg?im_w=720", "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/118d09e1-f793-4c50-b8b6-dea166070c1a.jpeg?im_w=720","https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/c3bcba17-9a52-4fad-a08e-1dff42b47ce9.jpeg?im_w=720"];
 
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
@@ -36,6 +33,9 @@ const Items: React.FC = () => {
           src={images[currentImageIndex]}
           alt=""
         />
+        <div className="absolute top-0 left-50 right-0 m-4">
+          <img className="h-6 w-6" src={like} alt="Botón para guardar favoritos" />
+        </div>
         {showArrows && (
           <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-2">
             {images.map((_, index) => (
