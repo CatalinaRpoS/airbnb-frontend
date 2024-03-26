@@ -258,7 +258,7 @@ const Footer: React.FC = () => {
 
       <br />
       <hr />
-      <section className="flex justify-between p-4 lg:px-8">
+      <section className="terms flex justify-between p-4 lg:px-8">
         <div className="flex">
           <div className="flex mx-2">© 2024 Airbnb, Inc.</div>
           <span>·</span>
