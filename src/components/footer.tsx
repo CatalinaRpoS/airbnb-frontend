@@ -5,36 +5,78 @@ import twitter from "../assets/twitter.svg";
 import instagram from "../assets/instagram.svg";
 
 const Footer: React.FC = () => {
+  const highlightText = (id: number) => {
+    const element = document.getElementById(`text-${id}`);
+    if (element) {
+      element.classList.add("text-black", "font-semibold");
+    }
+  };
+
+  const softenText = (id: number) => {
+    const element = document.getElementById(`text-${id}`);
+    if (element) {
+      element.classList.remove("text-black", "font-semibold");
+    }
+  };
+
   return (
     <footer className="bg-slate-50">
       <section className="p-10">
         <div>
-          <p className="font-semibold text-2xl">
+          <p className="text-black font-semibold text-2xl">
             Inspiración para escapadas futuras
           </p>
         </div>
         <div className="mt-4 pb-5">
           <ul className="list-none flex">
-            <li className="mr-4 active:font-semibold hover:cursor-pointer">
-              Popular
+            <li
+              className="mr-4 hover:cursor-pointer"
+              onMouseEnter={() => highlightText(1)}
+              onMouseLeave={() => softenText(1)}
+            >
+              <p id="text-1">Popular</p>
             </li>
-            <li className="mr-4 active:font-semibold hover:cursor-pointer">
-              Arte y cultura
+            <li
+              className="mr-4 hover:cursor-pointer"
+              onMouseEnter={() => highlightText(2)}
+              onMouseLeave={() => softenText(2)}
+            >
+              <p id="text-2">Arte y cultura</p>
             </li>
-            <li className="mr-4 active:font-semibold hover:cursor-pointer">
-              Al aire libre
+            <li
+              className="mr-4 hover:cursor-pointer"
+              onMouseEnter={() => highlightText(3)}
+              onMouseLeave={() => softenText(3)}
+            >
+              <p id="text-3">Al aire libre</p>
             </li>
-            <li className="mr-4 active:font-semibold hover:cursor-pointer">
-              Montañas
+            <li
+              className="mr-4 hover:cursor-pointer"
+              onMouseEnter={() => highlightText(4)}
+              onMouseLeave={() => softenText(4)}
+            >
+              <p id="text-4">Montañas</p>
             </li>
-            <li className="mr-4 active:font-semibold hover:cursor-pointer">
-              Playa
+            <li
+              className="mr-4 hover:cursor-pointer"
+              onMouseEnter={() => highlightText(5)}
+              onMouseLeave={() => softenText(5)}
+            >
+              <p id="text-5">Playa</p>
             </li>
-            <li className="mr-4 active:font-semibold hover:cursor-pointer">
-              Categorías
+            <li
+              className="mr-4 hover:cursor-pointer"
+              onMouseEnter={() => highlightText(6)}
+              onMouseLeave={() => softenText(6)}
+            >
+              <p id="text-6">Categorías</p>
             </li>
-            <li className="mr-4 active:font-semibold hover:cursor-pointer">
-              Actividades
+            <li
+              className="mr-4 hover:cursor-pointer"
+              onMouseEnter={() => highlightText(7)}
+              onMouseLeave={() => softenText(7)}
+            >
+              <p id="text-7">Actividades</p>
             </li>
           </ul>
         </div>
@@ -42,104 +84,115 @@ const Footer: React.FC = () => {
           <hr />
           <div className="grid grid-cols-6 pt-5 gap-4">
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Canmore</p>
+              <p className="text-black font-semibold">Canmore</p>
               <p>Chalés vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Benalmádena</p>
+              <p className="text-black font-semibold">Benalmádena</p>
               <p>Casas vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Marbella</p>
+              <p className="text-black font-semibold">Marbella</p>
               <p>Casas de campo vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Mijas</p>
+              <p className="text-black font-semibold">Mijas</p>
               <p>Casas vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Prescott</p>
+              <p className="text-black font-semibold">Prescott</p>
               <p>Casas vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Scottdale</p>
+              <p className="text-black font-semibold">Scottdale</p>
               <p>Mansiones vacacionales</p>
             </div>
 
             {/* fila 2 */}
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Tucson</p>
+              <p className="text-black font-semibold">Tucson</p>
               <p>Mansiones vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Jasper</p>
+              <p className="text-black font-semibold">Jasper</p>
               <p>Cabañas vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Mountain View</p>
+              <p className="text-black font-semibold">Mountain View</p>
               <p>Casas vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Devon port</p>
+              <p className="text-black font-semibold">Devon port</p>
               <p>Alquileres vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Mallacoota</p>
+              <p className="text-black font-semibold">Mallacoota</p>
               <p>Casas vacacionales en la playa</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Ibiza</p>
+              <p className="text-black font-semibold">Ibiza</p>
               <p>Alquileres vacacionales</p>
             </div>
 
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Anaheim</p>
+              <p className="text-black font-semibold">Anaheim</p>
               <p>Casas vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Monterey</p>
+              <p className="text-black font-semibold">Monterey</p>
               <p>Condominios vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Paso Robles</p>
+              <p className="text-black font-semibold">Paso Robles</p>
               <p>Casas vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Santa Bárbara</p>
+              <p className="text-black font-semibold">Santa Bárbara</p>
               <p>Alojamientos vacacionales</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Sonoma</p>
+              <p className="text-black font-semibold">Sonoma</p>
               <p>Casas vacacionales en la playa</p>
             </div>
             <div className="col-span-1 hover:cursor-pointer">
-              <p className="font-semibold">Mostrar más ▼</p>
+              <p className="text-black font-semibold">Mostrar más ▼</p>
             </div>
           </div>
         </div>
       </section>
-      <br />
       <hr />
 
-      <section className="grid grid-cols-3 justify-around p-10 lg:px-8">
+      <section className="help grid grid-cols-3 justify-around p-10 lg:px-8">
         <div className="col-span-1">
           <p className="font-semibold">Asistencia</p>
           <ul className="grid grid-cols-1 justify-around">
             <li className="py-3 hover:underline">
-              <a href="https://www.airbnb.com.co/help/home?from=footer">Centro de ayuda</a>
-            </li>
-            <li className="pb-3 hover:underline"><a href="https://www.airbnb.com.co/aircover">AirCover</a></li>
-            <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/against-discrimination">Antidiscriminación</a>
+              <a href="https://www.airbnb.com.co/help/home?from=footer">
+                Centro de ayuda
+              </a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/accessibility">Apoyo para discapacitados</a>
+              <a href="https://www.airbnb.com.co/aircover">AirCover</a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19">Opciones de cancelación</a>
+              <a href="https://www.airbnb.com.co/against-discrimination">
+                Antidiscriminación
+              </a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/neighbors">Problemas de vecindario</a>
+              <a href="https://www.airbnb.com.co/accessibility">
+                Apoyo para discapacitados
+              </a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/help/article/2701/extenuating-circumstances-policy-and-the-coronavirus-covid19">
+                Opciones de cancelación
+              </a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/neighbors">
+                Problemas de vecindario
+              </a>
             </li>
           </ul>
         </div>
@@ -147,34 +200,57 @@ const Footer: React.FC = () => {
           <p className="font-semibold">Modo anfitrión</p>
           <ul className="grid grid-cols-1 justify-around">
             <li className="py-3 hover:underline">
-              <a href="https://www.airbnb.com.co/host/homes?from_footer=1">Pon tu espacio en Airbnb</a>
+              <a href="https://www.airbnb.com.co/host/homes?from_footer=1">
+                Pon tu espacio en Airbnb
+              </a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/aircover-for-hosts">AirCover para anfitriones</a>
+              <a href="https://www.airbnb.com.co/aircover-for-hosts">
+                AirCover para anfitriones
+              </a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/resources">Recursos para anfitrionar</a>
+              <a href="https://www.airbnb.com.co/resources">
+                Recursos para anfitrionar
+              </a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/help/community?s=footer">Foro comunitario</a>
+              <a href="https://www.airbnb.com.co/help/community?s=footer">
+                Foro comunitario
+              </a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/help/responsible-hosting">Anfitriona con responsabilidad</a>
+              <a href="https://www.airbnb.com.co/help/responsible-hosting">
+                Anfitriona con responsabilidad
+              </a>
             </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.com.co/ambassadors/joinaclass">Súmate a una clase gratuita sobre la actividad de los anfitriones</a>
+              <a href="https://www.airbnb.com.co/ambassadors/joinaclass">
+                Súmate a una clase gratuita sobre la actividad de los
+                anfitriones
+              </a>
             </li>
           </ul>
         </div>
         <div className="col-span-1">
           <p className="font-semibold">Airbnb</p>
           <ul className="grid grid-cols-1 justify-around">
-            <li className="py-3 hover:underline"><a href="https://www.airbnb.com.co/press/news">Sala de prensa</a></li>
-            <li className="pb-3 hover:underline"><a href="https://www.airbnb.com.co/release">Funciones nuevas</a></li>
-            <li className="pb-3 hover:underline"><a href="https://www.airbnb.com.co/careers">Carreras</a></li>
-            <li className="pb-3 hover:underline"><a href="https://investors.airbnb.com/">Inversionistas</a></li>
+            <li className="py-3 hover:underline">
+              <a href="https://www.airbnb.com.co/press/news">Sala de prensa</a>
+            </li>
             <li className="pb-3 hover:underline">
-              <a href="https://www.airbnb.org/?locale=es-XL">Espacios de Airbnb.org</a>
+              <a href="https://www.airbnb.com.co/release">Funciones nuevas</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.com.co/careers">Carreras</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://investors.airbnb.com/">Inversionistas</a>
+            </li>
+            <li className="pb-3 hover:underline">
+              <a href="https://www.airbnb.org/?locale=es-XL">
+                Espacios de Airbnb.org
+              </a>
             </li>
           </ul>
         </div>

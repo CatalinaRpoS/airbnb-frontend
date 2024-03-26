@@ -1,39 +1,30 @@
 import "../styles/main.css";
 import Items from "../elements/items";
-import { FC } from "react";
 import filter from "../assets/filter.svg";
-import arrowl from '../assets/arrow_le.svg';
-import arrowr from '../assets/arrow_ri.svg';
 import List from "../elements/list";
 
-const Main: FC = () => {
+const Main: React.FC = () => {
   return (
-    <main className="bg-white m-6">
-      <div className="flex justify-between">
-        <div className="flex">
-          <button className="text-black text-lg h-7 w-7 border rounded-full bg-white flex justify-center items-center">
-            <img className="h-3 w-3" src={arrowl} alt="" />
-          </button>
-          <List />
-          <button className="text-black text-lg h-7 w-7 border rounded-full bg-white flex justify-center items-center">
-            <img className="h-3 w-3" src={arrowr} alt="" />
-          </button>
-        </div>
-        <div>
-          <button className="h-12 flex justify-between items-center border rounded-xl px-4 py-2">
-            <img className="h-6 w-6 pr-2" src={filter} alt="" />
-            <span className="text-black font-semibold">Filtros</span>
-          </button>
-        </div>
-        <div>
-          <button className="h-12 flex justify-between items-center border  rounded-xl px-4 py-2">
-            <span className="text-black font-semibold pr-2">Precio total sin impuestos</span>
-            <img className="h-5 w-5" src={filter} alt="" />
-          </button>
+    <main className="bg-white mt-6 mx-8">
+      <div className="flex justify-between items-center pb-3">
+        <List />
+        <button className="h-12 flex items-center border rounded-xl px-4 py-2">
+          <img className="h-6 w-6 pr-2" src={filter} alt="" />
+          <span className="text-black text-xs font-semibold">Filtros</span>
+        </button>
+
+        <div className="h-12 flex items-center justify-between border rounded-xl px-4 py-2">
+          <span className="text-black text-xs font-semibold pr-2 truncate">
+            Precio total sin impuestos
+          </span>
+          <button
+            className="bg-gray-400 border-solid rounded-full w-12 h-6"
+            role="switch"
+          ></button>
         </div>
       </div>
 
-      <div className="flex flex-wrap items-center justify-center">
+      <div className="flex flex-wrap items-center justify-between">
         <Items />
         <Items />
         <Items />

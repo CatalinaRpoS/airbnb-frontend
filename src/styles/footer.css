@@ -1,7 +1,11 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 footer {
-    font-family: "Open Sans", sans-serif;
-    font-size: 0.875rem;
+  font-family: "Open Sans", sans-serif;
+  font-size: 0.875rem;
+  color: #717171;
+}
+
+.help {
     color: #222222;
 }
