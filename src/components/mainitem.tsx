@@ -1,7 +1,6 @@
 import translate from "../assets/svg_assets/translate.svg";
 import share from "../assets/svg_assets/share.svg";
 import save from "../assets/svg_assets/save.svg";
-import arrowr from "../assets/svg_assets/arrow_ri.svg";
 import star from "../assets/svg_assets/star.svg";
 import pool from "../assets/svg_assets/pool.svg";
 import trophy from "../assets/svg_assets/trophy.svg";
@@ -15,16 +14,11 @@ import no_detector from "../assets/svg_assets/no_detector.svg";
 import parking from "../assets/svg_assets/parking.svg";
 import camera from "../assets/svg_assets/camera.svg";
 import profile_photo from "../assets/png_assets/profile_photo.png";
+import ShowMore from "../elements/showmore";
+import PlaceImages from "../elements/placeimages";
+import MapContainer from "../elements/mapcontainer";
 
 const MainItem: React.FC = () => {
-  const images = [
-    "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/defd5cac-2763-44d4-bbdd-9f7a59c2359d.jpeg?im_w=960",
-    "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/3a46cf50-b38c-488a-81ce-69f270f46eb3.jpeg?im_w=720",
-    "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/85236caf-c35e-41af-89a4-87402fab6bc3.jpeg?im_w=720",
-    "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/118d09e1-f793-4c50-b8b6-dea166070c1a.jpeg?im_w=720",
-    "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/c3bcba17-9a52-4fad-a08e-1dff42b47ce9.jpeg?im_w=720",
-  ];
-
   return (
     <main className="text-black">
       <div className="pt-3 my-3 mx-20 flex items-center justify-between">
@@ -45,33 +39,7 @@ const MainItem: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="mx-20 my-5 h-72 grid grid-cols-4 grid-rows-2 gap-2">
-        <img
-          src={images[0]}
-          alt="Imagen 1"
-          className="col-span-2 row-span-2 rounded-tl-lg rounded-bl-lg object-cover w-full h-full"
-        />
-        <img
-          src={images[1]}
-          alt="Imagen 2"
-          className="row-span-1 object-cover w-full h-full"
-        />
-        <img
-          src={images[3]}
-          alt="Imagen 3"
-          className="row-span-1 rounded-tr-lg object-cover w-full h-full"
-        />
-        <img
-          src={images[2]}
-          alt="Imagen 4"
-          className="row-span-1 object-cover w-full h-full"
-        />
-        <img
-          src={images[4]}
-          alt="Imagen 5"
-          className="row-span-1 rounded-br-lg object-cover w-full h-full"
-        />
-      </div>
+      <PlaceImages />
       <section className="mx-10 grid grid-cols-3 justify-around px-10 lg:px-8">
         <div className="col-span-2">
           <div>
@@ -146,12 +114,7 @@ const MainItem: React.FC = () => {
           <p className="mt-6 text-base text-[#222222] font-semibold">
             El espacio...
           </p>
-          <div className="pt-6 flex items-center opacity-95 hover:opacity-100 hover:cursor-pointer">
-            <p className="underline pr-1 font-semibold text-base">
-              Mostrar más
-            </p>
-            <img className="h-3 w-3" src={arrowr} alt="Mostrar más" />
-          </div>
+          <ShowMore />
 
           <hr className="my-8" />
           <div>
@@ -222,9 +185,73 @@ const MainItem: React.FC = () => {
                   </p>
                 </div>
               </div>
+              <button className="w-56 flex items-center justify-center border border-black hover:bg-gray-100 rounded-lg px-4 py-3 mt-7">
+                <span className="text-black text-base font-semibold">Mostrar los 47 servicios</span>
+              </button>
             </div>
           </div>
+          <hr className="mt-8" />
+          <div className="mt-12">
+            <p className="font-semibold text-xl">
+              7 noches en Santiago de Tolú
+            </p>
+            <p className="text-sm text-[#717171] pt-2">
+              15 de ene. de 2025 - 22 de ene. de 2025
+            </p>
+          </div>
         </div>
+      </section>
+      <hr className="my-3 mx-20" />
+
+      <section className="mx-10 lg:px-8">
+        <div className="mt-12">
+            <p className="font-semibold text-2xl">
+              1 reseña
+            </p>
+            <p className="text-sm text-[#717171] pt-2">
+            La calificación promedio aparecerá después de 3 reseñas
+            </p>
+          </div>
+        <div className="flex items-center pt-8">
+          <img
+            className="h-12 w-12 rounded-full"
+            src={profile_photo}
+            alt="photo"
+          />
+          <div className="pl-3">
+            <p className="text-base font-semibold">Raffa</p>
+            <p className="text-sm text-[#717171]">Ocaña, Colombia</p>
+          </div>
+        </div>
+        <div className="mt-5">
+            <p className="flex items-center text-sm pb-2">
+                  <img className="h-2.5 w-2.5" src={star} alt="" /> 
+                  <img className="h-2.5 w-2.5" src={star} alt="" />
+                  <img className="h-2.5 w-2.5" src={star} alt="" />
+                  <img className="h-2.5 w-2.5"src={star} alt="" />
+                  <img className="h-2.5 w-2.5" src={star} alt="" />
+                  <span> · </span> <p className="font-semibold px-1">Hace 2 semana</p><span> · </span>
+                  <p className="text-[#717171] px-1">En grupo</p>
+            </p>
+        </div>
+        <div>
+          <p className="w-2/5 text-base">lugar agradable para hospedarse, con mucha privacidad, tranquilidad y personal atento a las necesidades del hospedero</p>
+        </div>
+      </section>
+
+      <section className="mx-10 lg:px-8">
+        <div className="mt-12">
+            <p className="font-semibold text-2xl">
+              A dónde irás
+            </p>
+            <p className="text-sm text-[#717171] pt-2">
+              Santiago de Tolú, Sucre, Colombia
+            </p>
+        </div>
+        <div className="my-7">
+        <MapContainer />
+        </div>
+        <ShowMore />
       </section>
 
       <br />
@@ -238,10 +265,7 @@ const MainItem: React.FC = () => {
           <p className="py-2 text-sm">El check-in es a partir de las 15:00</p>
           <p className="py-2 text-sm">La salida es antes de las 11:00</p>
           <p className="py-2 text-sm">Se admiten mascotas</p>
-          <div className="pt-2 flex items-center opacity-95 hover:opacity-100 hover:cursor-pointer">
-            <p className="underline pr-1 font-semibold">Mostrar más</p>
-            <img className="h-3 w-3" src={arrowr} alt="Mostrar más" />
-          </div>
+          <ShowMore />
         </div>
         <div className="col-span-1">
           <p className="py-2 font-semibold text-base">Seguridad y propiedad</p>
@@ -250,10 +274,7 @@ const MainItem: React.FC = () => {
           <p className="py-2 text-sm">
             Cámara de seguridad/dispositivo de grabación
           </p>
-          <div className="pt-2 flex items-center opacity-95 hover:opacity-100 hover:cursor-pointer">
-            <p className="underline pr-1 font-semibold">Mostrar más</p>
-            <img className="h-3 w-3" src={arrowr} alt="Mostrar más" />
-          </div>
+          <ShowMore />
         </div>
         <div className="col-span-1">
           <p className="py-2 font-semibold text-base">
@@ -265,10 +286,7 @@ const MainItem: React.FC = () => {
             aplica incluso si cancelas por problemas de salud, incluidos
             aquellos causados por la COVID-19.
           </p>
-          <div className="pt-2 flex items-center opacity-95 hover:opacity-100 hover:cursor-pointer">
-            <p className="underline pr-1 font-semibold">Mostrar más</p>
-            <img className="h-3 w-3" src={arrowr} alt="Mostrar más" />
-          </div>
+          <ShowMore />
         </div>
       </section>
     </main>

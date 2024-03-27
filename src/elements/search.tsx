@@ -10,7 +10,6 @@ const Search: React.FC = () => {
           const clicked = event.target as HTMLElement;
     
           if (
-            !clicked.classList.contains("modify-button") &&
             !clicked.classList.contains("modify-button")
           ) {
             if (button) {
