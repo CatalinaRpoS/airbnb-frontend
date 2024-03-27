@@ -21,6 +21,7 @@ const Items: React.FC = () => {
     );
   };
 
+
   return (
     <div
       className="relative p-3"
@@ -28,13 +29,17 @@ const Items: React.FC = () => {
       onMouseLeave={() => setShowArrows(false)}
     >
       <div className="relative">
-        <img
-          className="item rounded-lg w-64 h-64"
+      <img
+          className='item rounded-lg w-64 h-64'
           src={images[currentImageIndex]}
           alt=""
         />
-        <div className="absolute top-0 left-50 right-0 m-4">
-          <img className="h-6 w-6" src={like} alt="Botón para guardar favoritos" />
+        <div className="absolute top-3 left-56 right-0">
+          <button
+            className="transition ease-in delay-150 hover:-translate-x-0 hover:-translate-y-0 hover:scale-110 duration-300"
+          >
+            <img className="h-6 w-6" src={like} alt="" />
+          </button>
         </div>
         {showArrows && (
           <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-2">
@@ -52,13 +57,13 @@ const Items: React.FC = () => {
       {showArrows && (
         <div className="absolute top-0 left-6 right-6 bottom-20 flex justify-between items-center">
           <button
-            className="text-black text-lg h-7 w-7 rounded-full bg-white flex justify-center items-center"
+            className="text-black text-lg h-7 w-7 rounded-full bg-white flex justify-center items-center transition ease-in delay-150 hover:-translate-x-0 hover:-translate-y-0 hover:scale-110 duration-300"
             onClick={prevImage}
           >
             <img className="h-3 w-3" src={arrowl} alt="" />
           </button>
           <button
-            className="text-black text-lg h-7 w-7 rounded-full bg-white flex justify-center items-center"
+            className="text-black text-lg h-7 w-7 rounded-full bg-white flex justify-center items-center  transition ease-in delay-150 hover:-translate-x-0 hover:-translate-y-0 hover:scale-110 duration-300"
             onClick={nextImage}
           >
             <img className="h-3 w-3" src={arrowr} alt="" />
@@ -79,5 +84,6 @@ const Items: React.FC = () => {
     </div>
   );
 };
+
 
 export default Items;

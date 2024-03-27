@@ -5,7 +5,7 @@ import Footer from "../components/footer";
 const MainPage = () => {
   return (
     <div>
-      <Header />
+      <Header showDetails={true} />
         <Main />
         <Footer/>
     </div>

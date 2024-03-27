@@ -35,7 +35,7 @@ const Main: React.FC = () => {
             }`}
           ></span>
           {activado && (
-            <img className="absolute top-1/2 right-2 h-4 w-4 text-black transform -translate-y-1/2" src={check} alt="Simbolo check" />
+            <img className="absolute top-1/2 right-2 h-4 w-4 -translate-y-1/2" src={check} alt="Simbolo check" />
           )}
           </button>
         </div>
@@ -57,7 +57,7 @@ const Main: React.FC = () => {
       </div>
       <div className="m-10 flex flex-col items-center">
         <p className="text-black font-semibold text-xl">Sigue explorando las categorías</p>
-        <button className="bg-black h-12 w-32 flex items-center border rounded-xl px-5 py-4 m-4">
+        <button className="bg-opacity-80 bg-black hover:bg-opacity-100 h-12 w-32 flex items-center border rounded-xl px-5 py-4 m-4">
           <span className="text-white text-sm font-semibold">Mostrar más</span>
         </button>
       </div>
