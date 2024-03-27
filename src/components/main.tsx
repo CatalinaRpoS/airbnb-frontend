@@ -1,9 +1,9 @@
 import { useState } from "react";
 import "../styles/main.css";
 import Items from "../elements/items";
-import filter from "../assets/filter.svg";
+import filter from "../assets/svg_assets/filter.svg";
 import List from "../elements/list";
-import check from "../assets/check.svg";
+import check from "../assets/svg_assets/check.svg";
 
 const Main: React.FC = () => {
   const [activado, setActivado] = useState(false);

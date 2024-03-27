@@ -1,5 +1,5 @@
 import "../styles/footer.css";
-import arrowd from "../assets/arrow_do.svg";
+import arrowd from "../assets/svg_assets/arrow_do.svg";
 import FooterSection from "./footersection";
 
 const Footer: React.FC = () => {

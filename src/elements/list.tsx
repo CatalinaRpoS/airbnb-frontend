@@ -1,6 +1,6 @@
 import { useState } from "react";
-import arrowl from "../assets/arrow_le.svg";
-import arrowr from "../assets/arrow_ri.svg";
+import arrowl from "../assets/svg_assets/arrow_le.svg";
+import arrowr from "../assets/svg_assets/arrow_ri.svg";
 
 const List: React.FC = () => {
   const [currentElementIndex, setCurrentElementIndex] = useState(0);

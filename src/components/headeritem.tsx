@@ -1,4 +1,4 @@
-import magnifying_glass from "../assets/magnifying_glass.svg";
+import magnifying_glass from "../assets/svg_assets/magnifying_glass.svg";
 
 const HeaderItem: React.FC = () => {
   return (

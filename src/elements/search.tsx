@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import magnifying_glass from "../assets/magnifying_glass.svg";
+import magnifying_glass from "../assets/svg_assets/magnifying_glass.svg";
 
 const Search: React.FC = () => {
 
@@ -106,9 +106,6 @@ const Search: React.FC = () => {
           </div>
         </button>
       </div>
-
-      <br />
-      <hr />
       </>
     );
 }

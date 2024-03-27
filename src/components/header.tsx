@@ -1,11 +1,12 @@
 import "../styles/header.css";
 import HeaderSection from "./headermain";
-import Search from "./search";
-import airbnbLogo from "../assets/airbnb_logo.svg";
-import world from "../assets/world.svg";
-import profile from "../assets/profile.svg";
-import strokes from "../assets/strokes.svg";
+import Search from "../elements/search";
 import HeaderItem from "./headeritem";
+import airbnbLogo from "../assets/svg_assets/airbnb_logo.svg";
+import world from "../assets/svg_assets/world.svg";
+import profile from "../assets/svg_assets/profile.svg";
+import strokes from "../assets/svg_assets/strokes.svg";
+
 
 interface HeaderProps {
   showDetails: boolean;
@@ -20,7 +21,7 @@ const Header: React.FC<HeaderProps> = ({showDetails}) => {
         aria-label="Global"
       >
         <div className="flex">
-          <a href="#" className="logo -m-1.5 p-1.5 flex items-center">
+          <a href="/" className="logo -m-1.5 p-1.5 flex items-center">
             <img
               className="h-8 w-auto"
               src={airbnbLogo}
@@ -56,6 +57,7 @@ const Header: React.FC<HeaderProps> = ({showDetails}) => {
         </div>
       </nav>
       {showDetails && (<Search />)}
+      <hr />
     </header>
   );
 };

@@ -1,5 +1,5 @@
 import FooterSection from "./footersection";
-import arrow from "../assets/arrow_ri.svg";
+import arrow from "../assets/svg_assets/arrow_ri.svg";
 const FooterItem: React.FC = () => {
     return (
         <footer className="bg-slate-50">

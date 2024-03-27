@@ -1,8 +1,8 @@
 
-import world from "../assets/world.svg";
-import facebook from "../assets/facebook.svg";
-import twitter from "../assets/twitter.svg";
-import instagram from "../assets/instagram.svg";
+import world from "../assets/svg_assets/world.svg";
+import facebook from "../assets/svg_assets/facebook.svg";
+import twitter from "../assets/svg_assets/twitter.svg";
+import instagram from "../assets/svg_assets/instagram.svg";
 
 const FooterSection: React.FC = () => {
     return (
