@@ -7,16 +7,14 @@ import world from "../assets/svg_assets/world.svg";
 import profile from "../assets/svg_assets/profile.svg";
 import strokes from "../assets/svg_assets/strokes.svg";
 
-
 interface HeaderProps {
   showDetails: boolean;
 }
 
-const Header: React.FC<HeaderProps> = ({showDetails}) => {
-
+const Header: React.FC<HeaderProps> = ({ showDetails }) => {
   return (
     <header className="bg-white">
-        <nav
+      <nav
         className="flex justify-between items-center p-4 lg:px-8"
         aria-label="Global"
       >
@@ -56,7 +54,8 @@ const Header: React.FC<HeaderProps> = ({showDetails}) => {
           </button>
         </div>
       </nav>
-      {showDetails && (<Search />)}
+      {showDetails && <Search />}
+      {showDetails && <br />}
       <hr />
     </header>
   );

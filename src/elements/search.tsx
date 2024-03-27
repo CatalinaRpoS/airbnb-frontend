@@ -2,50 +2,47 @@ import { useEffect } from "react";
 import magnifying_glass from "../assets/svg_assets/magnifying_glass.svg";
 
 const Search: React.FC = () => {
+  useEffect(() => {
+    const hideSearchButton = (event: MouseEvent) => {
+      const button = document.getElementById("search-button");
+      const label = document.getElementById("search-label");
+      const clicked = event.target as HTMLElement;
 
-    useEffect(() => {
-        const hideSearchButton = (event: MouseEvent) => {
-          const button = document.getElementById("search-button");
-          const label = document.getElementById("search-label");
-          const clicked = event.target as HTMLElement;
-    
-          if (
-            !clicked.classList.contains("modify-button")
-          ) {
-            if (button) {
-              button.classList.remove("w-24");
-              button.classList.add("w-12");
-            }
-            if (label) {
-              label.classList.add("hidden");
-            }
-          }
-        };
-    
-        document.addEventListener("click", hideSearchButton);
-    
-        return () => {
-          document.removeEventListener("click", hideSearchButton);
-        };
-      }, []);
-    
-      const showSearchButton = () => {
-        const button = document.getElementById("search-button");
-        const label = document.getElementById("search-label");
-    
+      if (!clicked.classList.contains("modify-button")) {
         if (button) {
-          button.classList.remove("w-12");
-          button.classList.add("w-24");
+          button.classList.remove("w-24");
+          button.classList.add("w-12");
         }
-    
         if (label) {
-          label.classList.remove("hidden");
+          label.classList.add("hidden");
         }
-      };
+      }
+    };
 
-    return (
-        <>
-        <div className="search flex justify-between bg-white rounded-full border border-gray-300 w-3/5 shadow-md p-2">
+    document.addEventListener("click", hideSearchButton);
+
+    return () => {
+      document.removeEventListener("click", hideSearchButton);
+    };
+  }, []);
+
+  const showSearchButton = () => {
+    const button = document.getElementById("search-button");
+    const label = document.getElementById("search-label");
+
+    if (button) {
+      button.classList.remove("w-12");
+      button.classList.add("w-24");
+    }
+
+    if (label) {
+      label.classList.remove("hidden");
+    }
+  };
+
+  return (
+    <>
+      <div className="search flex justify-between bg-white rounded-full border border-gray-300 w-3/5 shadow-md p-2">
         <button
           onClick={showSearchButton}
           className="modify-button bg-transparent hover:bg-gray-200 py-2 px-4 border-none rounded-full transition-all duration-300 focus:outline-none btn-outline-none"
@@ -56,8 +53,8 @@ const Search: React.FC = () => {
           <input
             type="form"
             placeholder="Explora destinos"
-            className="modify-button bg-transparent border-none focus:outline-none">
-          </input>
+            className="modify-button bg-transparent border-none focus:outline-none"
+          ></input>
         </button>
         <p className="font-bold flex items-center">|</p>
         <button
@@ -105,8 +102,8 @@ const Search: React.FC = () => {
           </div>
         </button>
       </div>
-      </>
-    );
-}
+    </>
+  );
+};
 
 export default Search;
