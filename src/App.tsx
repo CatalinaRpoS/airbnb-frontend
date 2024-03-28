@@ -5,7 +5,7 @@ import ItemPage from './pages/itempage';
 
 const App = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.DEV ? '/' : '/airbnb-frontend/'}>
     <Routes>
       <Route path="/" element={<MainPage />} />
       <Route path="/item" element={<ItemPage />} />
