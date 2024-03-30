@@ -1,0 +1,6 @@
+.vertical-divider {
+    border-left: 1px solid #ddd; /* Color y grosor del divisor vertical */
+    height: auto; /* Altura del divisor */
+    margin: 0 10px; /* Espacio horizontal entre los botones y el divisor */
+  }
+  

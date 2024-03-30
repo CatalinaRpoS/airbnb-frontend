@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import magnifying_glass from "../assets/svg_assets/magnifying_glass.svg";
+import "../styles/search.css";
 
 const Search: React.FC = () => {
   useEffect(() => {
@@ -42,35 +43,38 @@ const Search: React.FC = () => {
 
   return (
     <>
-      <div className="search flex w-3/5 justify-between rounded-full border border-gray-300 bg-white p-2 shadow-md">
+      <div className="search flex h-16 justify-between rounded-full border border-gray-300 bg-white p-2 shadow-md lg:w-2/3">
         <button
           onClick={showSearchButton}
-          className="modify-button btn-outline-none rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
+          className="modify-button btn-outline-none flex items-center rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
         >
-          <p className="modify-button flex justify-start font-semibold text-black">
-            Dónde
-          </p>
-          <input
-            type="form"
-            placeholder="Explora destinos"
-            className="modify-button border-none bg-transparent focus:outline-none"
-          ></input>
+          <div>
+            <p className="modify-button flex justify-start font-semibold text-black">
+              Dónde
+            </p>
+            <input
+              type="form"
+              placeholder="Explora destinos"
+              className="modify-button border-none bg-transparent focus:outline-none"
+            ></input>
+          </div>
         </button>
-        <p className="flex items-center font-bold">|</p>
+        <hr className="vertical-divider" />
         <button
           onClick={showSearchButton}
-          className="modify-button btn-outline-none rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
+          className="modify-button btn-outline-none flex items-center rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
         >
-          <p className="modify-button flex justify-start font-semibold text-black">
-            Fechas
-          </p>
-          <input
-            type="date"
-            placeholder="Agregar fechas"
-            className="modify-button border-none bg-transparent focus:outline-none"
-          />
+          <div>
+            <p className="modify-button flex justify-start font-semibold text-black">
+              Fecha
+            </p>
+            <input
+              type="date"
+              className="modify-button border-none bg-transparent focus:outline-none"
+            />
+          </div>
         </button>
-        <p className="flex items-center font-bold">|</p>
+        <hr className="vertical-divider" />
         <button
           onClick={showSearchButton}
           className="modify-button btn-outline-none flex items-center justify-between rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
