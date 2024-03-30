@@ -21,12 +21,12 @@ const Footer: React.FC = () => {
     <footer className="bg-slate-50">
       <section className="p-10">
         <div>
-          <p className="text-black font-semibold text-2xl">
+          <p className="text-2xl font-semibold text-black">
             Inspiración para escapadas futuras
           </p>
         </div>
         <div className="mt-4 pb-5">
-          <ul className="list-none flex">
+          <ul className="flex list-none">
             <li
               className="mr-4 hover:cursor-pointer"
               onMouseEnter={() => highlightText(1)}
@@ -80,82 +80,82 @@ const Footer: React.FC = () => {
         </div>
         <div>
           <hr />
-          <div className="grid grid-cols-6 pt-5 gap-4">
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Canmore</p>
+          <div className="grid grid-cols-2 gap-4 pt-5 lg:grid-cols-6">
+            <div>
+              <p className="font-semibold text-black">Canmore</p>
               <p>Chalés vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Benalmádena</p>
+            <div>
+              <p className="font-semibold text-black">Benalmádena</p>
               <p>Casas vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Marbella</p>
+            <div>
+              <p className="font-semibold text-black">Marbella</p>
               <p>Casas de campo vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Mijas</p>
+            <div>
+              <p className="font-semibold text-black">Mijas</p>
               <p>Casas vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Prescott</p>
+            <div>
+              <p className="font-semibold text-black">Prescott</p>
               <p>Casas vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Scottdale</p>
+            <div>
+              <p className="font-semibold text-black">Scottdale</p>
               <p>Mansiones vacacionales</p>
             </div>
 
             {/* fila 2 */}
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Tucson</p>
+            <div>
+              <p className="font-semibold text-black">Tucson</p>
               <p>Mansiones vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Jasper</p>
+            <div>
+              <p className="font-semibold text-black">Jasper</p>
               <p>Cabañas vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Mountain View</p>
+            <div>
+              <p className="font-semibold text-black">Mountain View</p>
               <p>Casas vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Devon port</p>
+            <div>
+              <p className="font-semibold text-black">Devon port</p>
               <p>Alquileres vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Mallacoota</p>
+            <div>
+              <p className="font-semibold text-black">Mallacoota</p>
               <p>Casas vacacionales en la playa</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Ibiza</p>
+            <div>
+              <p className="font-semibold text-black">Ibiza</p>
               <p>Alquileres vacacionales</p>
             </div>
 
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Anaheim</p>
+            <div>
+              <p className="font-semibold text-black">Anaheim</p>
               <p>Casas vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Monterey</p>
+            <div>
+              <p className="font-semibold text-black">Monterey</p>
               <p>Condominios vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Paso Robles</p>
+            <div>
+              <p className="font-semibold text-black">Paso Robles</p>
               <p>Casas vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Santa Bárbara</p>
+            <div>
+              <p className="font-semibold text-black">Santa Bárbara</p>
               <p>Alojamientos vacacionales</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
-              <p className="text-black font-semibold">Sonoma</p>
+            <div>
+              <p className="font-semibold text-black">Sonoma</p>
               <p>Casas vacacionales en la playa</p>
             </div>
-            <div className="col-span-1 hover:cursor-pointer">
+            <div>
               <div className="flex">
-               <p className="text-black font-semibold m-2">Mostrar más</p>
-               <img className="h-3 w-3 mt-3" src={arrowd} alt="Mas opciones" />
+                <p className="m-2 font-semibold text-black">Mostrar más</p>
+                <img className="mt-3 h-3 w-3" src={arrowd} alt="Mas opciones" />
               </div>
             </div>
           </div>

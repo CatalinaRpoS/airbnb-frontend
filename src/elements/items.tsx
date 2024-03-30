@@ -26,40 +26,40 @@ const Items: React.FC = () => {
   };
   const nextImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === images.length - 1 ? 0 : prevIndex + 1
+      prevIndex === images.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
   const prevImage = () => {
     setCurrentImageIndex((prevIndex) =>
-      prevIndex === 0 ? images.length - 1 : prevIndex - 1
+      prevIndex === 0 ? images.length - 1 : prevIndex - 1,
     );
   };
 
   return (
     <div
-      className="relative p-3 cursor-pointer"
+      className="relative cursor-pointer p-3"
       onClick={handleClick}
       onMouseEnter={() => setShowArrows(true)}
       onMouseLeave={() => setShowArrows(false)}
     >
       <div className="relative">
         <img
-          className="item rounded-lg w-64 h-64"
+          className="item rounded-lg"
           src={images[currentImageIndex]}
           alt=""
         />
-        <div className="absolute top-3 left-56 right-0">
-          <button className="transition ease-in delay-150 hover:-translate-x-0 hover:-translate-y-0 hover:scale-110 duration-300">
-            <img className="h-6 w-6" src={like} alt="" />
+        <div className="absolute right-3 top-3">
+          <button className="h-6 w-6 transition delay-150 duration-300 ease-in hover:-translate-x-0 hover:-translate-y-0 hover:scale-110">
+            <img className="h-6 w-6 " src={like} alt="" />
           </button>
         </div>
         {showArrows && (
-          <div className="absolute bottom-0 left-0 right-0 flex justify-center mb-2">
+          <div className="absolute bottom-0 left-0 right-0 mb-2 flex justify-center">
             {images.map((_, index) => (
               <div
                 key={index}
-                className={`h-2 w-2 rounded-full mx-1 ${
+                className={`mx-1 h-2 w-2 rounded-full ${
                   index === currentImageIndex ? "bg-white" : "bg-gray-300"
                 }`}
               ></div>
@@ -68,15 +68,15 @@ const Items: React.FC = () => {
         )}
       </div>
       {showArrows && (
-        <div className="absolute top-0 left-6 right-6 bottom-20 flex justify-between items-center">
+        <div className="absolute bottom-20 left-6 right-6 top-0 flex items-center justify-between">
           <button
-            className="arrow text-black text-lg h-7 w-7 rounded-full bg-white flex justify-center items-center transition ease-in delay-150 hover:-translate-x-0 hover:-translate-y-0 hover:scale-110 duration-300"
+            className="arrow flex h-7 w-7 items-center justify-center rounded-full bg-white text-lg text-black transition delay-150 duration-300 ease-in hover:-translate-x-0 hover:-translate-y-0 hover:scale-110"
             onClick={prevImage}
           >
             <img className="arrow h-3 w-3" src={arrowl} alt="" />
           </button>
           <button
-            className="arrow text-black text-lg h-7 w-7 rounded-full bg-white flex justify-center items-center  transition ease-in delay-150 hover:-translate-x-0 hover:-translate-y-0 hover:scale-110 duration-300"
+            className="arrow flex h-7 w-7 items-center justify-center rounded-full bg-white text-lg text-black  transition delay-150 duration-300 ease-in hover:-translate-x-0 hover:-translate-y-0 hover:scale-110"
             onClick={nextImage}
           >
             <img className="arrow h-3 w-3" src={arrowr} alt="" />
@@ -91,7 +91,7 @@ const Items: React.FC = () => {
         <p>21 – 26 de abr</p>
       </div>
       <div className="flex">
-        <p className="font-bold text-black mr-2">$5,175,000 COP</p>
+        <p className="mr-2 font-bold text-black">$5,175,000 COP</p>
         <p className="text-black">noche</p>
       </div>
     </div>

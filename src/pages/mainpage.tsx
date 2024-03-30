@@ -6,8 +6,8 @@ const MainPage = () => {
   return (
     <div>
       <Header showDetails={true} />
-        <Main />
-        <Footer/>
+      <Main />
+      <Footer />
     </div>
   );
 };

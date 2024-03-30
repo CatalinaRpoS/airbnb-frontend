@@ -1,14 +1,13 @@
-
 import world from "../assets/svg_assets/world.svg";
 import facebook from "../assets/svg_assets/facebook.svg";
 import twitter from "../assets/svg_assets/twitter.svg";
 import instagram from "../assets/svg_assets/instagram.svg";
 
 const FooterSection: React.FC = () => {
-    return (
+  return (
     <>
-        <section className="help grid grid-cols-3 justify-around p-10 lg:px-8">
-        <div className="col-span-1">
+      <section className="help grid p-10 pb-0 lg:grid-cols-3 lg:p-8">
+        <div className="lg:col-span-1">
           <p className="font-semibold">Asistencia</p>
           <ul className="grid grid-cols-1 justify-around">
             <li className="py-3 hover:underline">
@@ -41,7 +40,8 @@ const FooterSection: React.FC = () => {
             </li>
           </ul>
         </div>
-        <div className="col-span-1">
+        <hr className="my-4 lg:hidden" />
+        <div className="lg:col-span-1">
           <p className="font-semibold">Modo anfitrión</p>
           <ul className="grid grid-cols-1 justify-around">
             <li className="py-3 hover:underline">
@@ -77,7 +77,8 @@ const FooterSection: React.FC = () => {
             </li>
           </ul>
         </div>
-        <div className="col-span-1">
+        <hr className="my-4 lg:hidden" />
+        <div className="lg:col-span-1">
           <p className="font-semibold">Airbnb</p>
           <ul className="grid grid-cols-1 justify-around">
             <li className="py-3 hover:underline">
@@ -103,44 +104,13 @@ const FooterSection: React.FC = () => {
 
       <br />
       <hr />
-      <section className="terms flex justify-between p-4 lg:px-8">
-        <div className="flex">
-          <div className="flex mx-2">© 2024 Airbnb, Inc.</div>
-          <span>·</span>
-          <a
-            className="flex mx-2 hover:underline"
-            href="https://www.airbnb.com.co/help/article/2855"
-          >
-            Privacidad
-          </a>
-          <span>·</span>
-          <a
-            className="flex mx-2 hover:underline"
-            href="https://www.airbnb.com.co/help/article/2908"
-          >
-            Términos
-          </a>
-          <span>·</span>
-          <a
-            className="flex mx-2 hover:underline"
-            href="https://www.airbnb.com.co/sitemaps/v2"
-          >
-            Mapa del sitio
-          </a>
-          <span>·</span>
-          <a
-            className="flex mx-2 hover:underline"
-            href="https://www.airbnb.com.co/about/company-details"
-          >
-            Datos de la empresa
-          </a>
-        </div>
-        <div>
-          <div className="flex items-center">
-            <img className="h-5 w-auto" src={world} alt="Language" />
-            <p className="font-semibold pl-2 hover:underline">Español (CO)</p>
-            <p className="font-semibold pl-4 text-lg">$</p>
-            <p className="font-semibold pl-2 hover:underline">COP</p>
+      <section className="terms flex flex-col items-start p-4 md:items-center lg:flex-row-reverse lg:justify-between lg:px-8 ">
+        <div className="flex items-center p-4 lg:px-8">
+          <img className="h-5 w-auto" src={world} alt="Language" />
+          <p className="pl-2 font-semibold hover:underline">Español (CO)</p>
+          <p className="pl-4 text-lg font-semibold">$</p>
+          <p className="pl-2 font-semibold hover:underline">COP</p>
+          <div className="hidden md:flex">
             <a href="https://www.facebook.com/AirbnbLatam" className="pl-6">
               <img className="h-5 w-auto" src={facebook} alt="Ir a Facebook" />
             </a>
@@ -156,9 +126,46 @@ const FooterSection: React.FC = () => {
             </a>
           </div>
         </div>
+
+        <div className="items-center p-4 md:flex md:flex-col md:p-0 lg:flex-row">
+          <div className="mx-2 flex justify-start md:justify-center">
+            © 2024 Airbnb, Inc.
+            <span className="hidden pl-2 lg:flex">·</span>
+          </div>
+
+          <div className="flex flex-wrap">
+            <a
+              className="mx-2 flex hover:underline"
+              href="https://www.airbnb.com.co/help/article/2855"
+            >
+              Privacidad
+            </a>
+            <span>·</span>
+            <a
+              className="mx-2 flex hover:underline"
+              href="https://www.airbnb.com.co/help/article/2908"
+            >
+              Términos
+            </a>
+            <span>·</span>
+            <a
+              className="mx-2 flex hover:underline"
+              href="https://www.airbnb.com.co/sitemaps/v2"
+            >
+              Mapa del sitio
+            </a>
+            <span>·</span>
+            <a
+              className="mx-2 flex hover:underline"
+              href="https://www.airbnb.com.co/about/company-details"
+            >
+              Datos de la empresa
+            </a>
+          </div>
+        </div>
       </section>
     </>
-    );
+  );
 };
 
 export default FooterSection;

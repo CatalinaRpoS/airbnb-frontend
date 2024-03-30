@@ -2,7 +2,11 @@ import { useState } from "react";
 import arrowl from "../assets/svg_assets/arrow_le.svg";
 import arrowr from "../assets/svg_assets/arrow_ri.svg";
 
-const List: React.FC = () => {
+interface ListProps {
+  countElements: number;
+}
+
+const List: React.FC<ListProps> = ({ countElements }) => {
   const [currentElementIndex, setCurrentElementIndex] = useState(0);
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(true);
@@ -10,7 +14,7 @@ const List: React.FC = () => {
   const handleNextClick = () => {
     setCurrentElementIndex(currentElementIndex + 1);
     setShowLeftArrow(true);
-    if (currentElementIndex + 7 >= elements.length - 1) {
+    if (currentElementIndex + countElements >= elements.length - 1) {
       setShowRightArrow(false);
     }
   };
@@ -109,7 +113,7 @@ const List: React.FC = () => {
       <div className="h-7 w-7">
         {showLeftArrow && (
           <button
-            className="text-black text-lg h-7 w-7 border rounded-full bg-white flex justify-center items-center hover:shadow-md"
+            className="flex h-7 w-7 items-center justify-center rounded-full border bg-white text-lg text-black hover:shadow-md"
             onClick={handlePrevClick}
           >
             <img className="h-3 w-3" src={arrowl} alt="" />
@@ -119,7 +123,7 @@ const List: React.FC = () => {
 
       <div className="flex">
         {elements
-          .slice(currentElementIndex, currentElementIndex + 7)
+          .slice(currentElementIndex, currentElementIndex + countElements)
           .map((_, index) => (
             <div
               className="px-6"
@@ -127,7 +131,7 @@ const List: React.FC = () => {
               onMouseEnter={() => highlightElement(index)}
               onMouseLeave={() => softenElement(index)}
             >
-              <button className="flex flex-col items-center justify-center hover:cursor-pointer px-4 w-14 h-14">
+              <button className="flex h-14 w-14 flex-col items-center justify-center px-4 hover:cursor-pointer">
                 <img
                   className="opacity-50"
                   id={`element-img-${index}`}
@@ -135,7 +139,7 @@ const List: React.FC = () => {
                   alt={elements[currentElementIndex + index][1]}
                 />
                 <p
-                  className="pt-2 font-semibold text-xs truncate"
+                  className="truncate pt-2 text-xs font-semibold"
                   id={`element-text-${index}`}
                 >
                   {elements[currentElementIndex + index][1]}
@@ -147,7 +151,7 @@ const List: React.FC = () => {
       <div className="h-7 w-7">
         {showRightArrow && (
           <button
-            className="text-black text-lg h-7 w-7 border rounded-full bg-white flex justify-center items-center hover:shadow-md"
+            className="flex h-7 w-7 items-center justify-center rounded-full border bg-white text-lg text-black hover:shadow-md"
             onClick={handleNextClick}
           >
             <img className="h-3 w-3" src={arrowr} alt="" />

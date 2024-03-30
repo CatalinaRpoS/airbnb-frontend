@@ -21,7 +21,7 @@ import MapContainer from "../elements/mapcontainer";
 const MainItem: React.FC = () => {
   return (
     <main className="text-black">
-      <div className="pt-3 my-3 mx-20 flex items-center justify-between">
+      <div className="mx-20 my-3 flex items-center justify-between pt-3">
         <div className="flex items-center">
           <img className="h-6 w-6" src={translate} alt="traducir" />
           <p className="pl-3 text-2xl font-semibold">
@@ -33,7 +33,7 @@ const MainItem: React.FC = () => {
             <img className="h-4 w-4" src={share} alt="compartir" />
             <p className="pl-3 text-sm font-semibold underline">Compartir</p>
           </div>
-          <div className="pl-4 flex items-center">
+          <div className="flex items-center pl-4">
             <img className="h-4 w-4" src={save} alt="guardar" />
             <p className="pl-2 text-sm font-semibold underline">Guardar</p>
           </div>
@@ -43,10 +43,10 @@ const MainItem: React.FC = () => {
       <section className="mx-10 grid grid-cols-3 justify-around px-10 lg:px-8">
         <div className="col-span-2">
           <div>
-            <p className="font-semibold text-2xl">
+            <p className="text-2xl font-semibold">
               Alojamiento entero en Santiago de Tolú, Colombia
             </p>
-            <p className="text-base pb-2">
+            <p className="pb-2 text-base">
               Más de 16 huéspedes <span>·</span> 5 habitaciones <span>·</span>{" "}
               14 camas <span>·</span> 4,5 baños
             </p>
@@ -103,7 +103,7 @@ const MainItem: React.FC = () => {
             </div>
           </div>
           <hr className="mt-8" />
-          <p className="mt-8 text-base text-[#222222] w-5/6">
+          <p className="mt-8 w-5/6 text-base text-[#222222]">
             Casa Mulé está diseñada para combinar la naturaleza, el lujo y el
             confort ofreciendo una experiencia única, desde las impresionantes
             puestas de sol hasta la más relajante brisa del océano, disfrutando
@@ -111,17 +111,17 @@ const MainItem: React.FC = () => {
             atendidos por nuestro equipo para así tener una experiencia
             inolvidable.
           </p>
-          <p className="mt-6 text-base text-[#222222] font-semibold">
+          <p className="mt-6 text-base font-semibold text-[#222222]">
             El espacio...
           </p>
           <ShowMore />
 
           <hr className="my-8" />
           <div>
-            <p className="font-semibold text-xl">Lo que este lugar ofrece</p>
+            <p className="text-xl font-semibold">Lo que este lugar ofrece</p>
             <div className="grid grid-cols-2">
               <div className="col-span-1 w-2/3">
-                <div className="flex items-center pt-6 pb-2">
+                <div className="flex items-center pb-2 pt-6">
                   <img className="h-6 w-6" src={frame} alt="frame" />
                   <p className="pl-6 text-base text-[#222222]">
                     Vista a la bahía
@@ -156,7 +156,7 @@ const MainItem: React.FC = () => {
                 </div>
               </div>
               <div className="col-span-1 w-2/3">
-                <div className="flex items-center pt-6 pb-2">
+                <div className="flex items-center pb-2 pt-6">
                   <img className="h-6 w-6" src={frame} alt="frame" />
                   <p className="pl-6 text-base text-[#222222]">
                     Vista al océano
@@ -185,33 +185,33 @@ const MainItem: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <button className="w-56 flex items-center justify-center border border-black hover:bg-gray-100 rounded-lg px-4 py-3 mt-7">
-                <span className="text-black text-base font-semibold">Mostrar los 47 servicios</span>
+              <button className="mt-7 flex w-56 items-center justify-center rounded-lg border border-black px-4 py-3 hover:bg-gray-100">
+                <span className="text-base font-semibold text-black">
+                  Mostrar los 47 servicios
+                </span>
               </button>
             </div>
           </div>
           <hr className="mt-8" />
           <div className="mt-12">
-            <p className="font-semibold text-xl">
+            <p className="text-xl font-semibold">
               7 noches en Santiago de Tolú
             </p>
-            <p className="text-sm text-[#717171] pt-2">
+            <p className="pt-2 text-sm text-[#717171]">
               15 de ene. de 2025 - 22 de ene. de 2025
             </p>
           </div>
         </div>
       </section>
-      <hr className="my-3 mx-20" />
+      <hr className="mx-20 my-3" />
 
       <section className="mx-10 lg:px-8">
         <div className="mt-12">
-            <p className="font-semibold text-2xl">
-              1 reseña
-            </p>
-            <p className="text-sm text-[#717171] pt-2">
+          <p className="text-2xl font-semibold">1 reseña</p>
+          <p className="pt-2 text-sm text-[#717171]">
             La calificación promedio aparecerá después de 3 reseñas
-            </p>
-          </div>
+          </p>
+        </div>
         <div className="flex items-center pt-8">
           <img
             className="h-12 w-12 rounded-full"
@@ -224,51 +224,53 @@ const MainItem: React.FC = () => {
           </div>
         </div>
         <div className="mt-5">
-            <p className="flex items-center text-sm pb-2">
-                  <img className="h-2.5 w-2.5" src={star} alt="" /> 
-                  <img className="h-2.5 w-2.5" src={star} alt="" />
-                  <img className="h-2.5 w-2.5" src={star} alt="" />
-                  <img className="h-2.5 w-2.5"src={star} alt="" />
-                  <img className="h-2.5 w-2.5" src={star} alt="" />
-                  <span> · </span> <p className="font-semibold px-1">Hace 2 semana</p><span> · </span>
-                  <p className="text-[#717171] px-1">En grupo</p>
-            </p>
+          <p className="flex items-center pb-2 text-sm">
+            <img className="h-2.5 w-2.5" src={star} alt="" />
+            <img className="h-2.5 w-2.5" src={star} alt="" />
+            <img className="h-2.5 w-2.5" src={star} alt="" />
+            <img className="h-2.5 w-2.5" src={star} alt="" />
+            <img className="h-2.5 w-2.5" src={star} alt="" />
+            <span> · </span> <p className="px-1 font-semibold">Hace 2 semana</p>
+            <span> · </span>
+            <p className="px-1 text-[#717171]">En grupo</p>
+          </p>
         </div>
         <div>
-          <p className="w-2/5 text-base">lugar agradable para hospedarse, con mucha privacidad, tranquilidad y personal atento a las necesidades del hospedero</p>
+          <p className="w-2/5 text-base">
+            lugar agradable para hospedarse, con mucha privacidad, tranquilidad
+            y personal atento a las necesidades del hospedero
+          </p>
         </div>
       </section>
 
       <section className="mx-10 lg:px-8">
         <div className="mt-12">
-            <p className="font-semibold text-2xl">
-              A dónde irás
-            </p>
-            <p className="text-sm text-[#717171] pt-2">
-              Santiago de Tolú, Sucre, Colombia
-            </p>
+          <p className="text-2xl font-semibold">A dónde irás</p>
+          <p className="pt-2 text-sm text-[#717171]">
+            Santiago de Tolú, Sucre, Colombia
+          </p>
         </div>
         <div className="my-7">
-        <MapContainer />
+          <MapContainer />
         </div>
         <ShowMore />
       </section>
 
       <br />
-      <hr className="my-3 mx-20" />
+      <hr className="mx-20 my-3" />
       <section className="mx-10 grid grid-cols-3 justify-around p-10 lg:px-8">
-        <p className="col-span-3 font-semibold text-2xl pb-2">
+        <p className="col-span-3 pb-2 text-2xl font-semibold">
           Lo que debes saber
         </p>
         <div className="col-span-1">
-          <p className="py-2 font-semibold text-base">Reglas de la casa</p>
+          <p className="py-2 text-base font-semibold">Reglas de la casa</p>
           <p className="py-2 text-sm">El check-in es a partir de las 15:00</p>
           <p className="py-2 text-sm">La salida es antes de las 11:00</p>
           <p className="py-2 text-sm">Se admiten mascotas</p>
           <ShowMore />
         </div>
         <div className="col-span-1">
-          <p className="py-2 font-semibold text-base">Seguridad y propiedad</p>
+          <p className="py-2 text-base font-semibold">Seguridad y propiedad</p>
           <p className="py-2 text-sm">No hay alarma de monóxido de carbono</p>
           <p className="py-2 text-sm">No hay alarma de humo</p>
           <p className="py-2 text-sm">
@@ -277,7 +279,7 @@ const MainItem: React.FC = () => {
           <ShowMore />
         </div>
         <div className="col-span-1">
-          <p className="py-2 font-semibold text-base">
+          <p className="py-2 text-base font-semibold">
             Política de cancelación
           </p>
           <p className="py-2 text-sm">Cancelación gratuita por 48 horas.</p>

@@ -42,52 +42,52 @@ const Search: React.FC = () => {
 
   return (
     <>
-      <div className="search flex justify-between bg-white rounded-full border border-gray-300 w-3/5 shadow-md p-2">
+      <div className="search flex w-3/5 justify-between rounded-full border border-gray-300 bg-white p-2 shadow-md">
         <button
           onClick={showSearchButton}
-          className="modify-button bg-transparent hover:bg-gray-200 py-2 px-4 border-none rounded-full transition-all duration-300 focus:outline-none btn-outline-none"
+          className="modify-button btn-outline-none rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
         >
-          <p className="modify-button flex justify-start text-black font-semibold">
+          <p className="modify-button flex justify-start font-semibold text-black">
             Dónde
           </p>
           <input
             type="form"
             placeholder="Explora destinos"
-            className="modify-button bg-transparent border-none focus:outline-none"
+            className="modify-button border-none bg-transparent focus:outline-none"
           ></input>
         </button>
-        <p className="font-bold flex items-center">|</p>
+        <p className="flex items-center font-bold">|</p>
         <button
           onClick={showSearchButton}
-          className="modify-button bg-transparent hover:bg-gray-200 py-2 px-4 border-none rounded-full transition-all duration-300 focus:outline-none btn-outline-none"
+          className="modify-button btn-outline-none rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
         >
-          <p className="modify-button flex justify-start text-black font-semibold">
+          <p className="modify-button flex justify-start font-semibold text-black">
             Fechas
           </p>
           <input
             type="date"
             placeholder="Agregar fechas"
-            className="modify-button bg-transparent border-none focus:outline-none"
+            className="modify-button border-none bg-transparent focus:outline-none"
           />
         </button>
-        <p className="font-bold flex items-center">|</p>
+        <p className="flex items-center font-bold">|</p>
         <button
           onClick={showSearchButton}
-          className="modify-button flex items-center justify-between bg-transparent hover:bg-gray-200 py-2 px-4 border-none rounded-full transition-all duration-300 focus:outline-none btn-outline-none"
+          className="modify-button btn-outline-none flex items-center justify-between rounded-full border-none bg-transparent px-4 py-2 transition-all duration-300 hover:bg-gray-200 focus:outline-none"
         >
           <div>
-            <p className="modify-button flex justify-start text-black font-semibold">
+            <p className="modify-button flex justify-start font-semibold text-black">
               Quién
             </p>
             <input
               type="form"
               placeholder="¿Cuántos?"
-              className="modify-button bg-transparent border-none focus:outline-none"
+              className="modify-button border-none bg-transparent focus:outline-none"
             />
           </div>
           <div
             id="search-button"
-            className="magnifying_glass flex items-center justify-evenly rounded-full h-12 w-12"
+            className="magnifying_glass flex h-12 w-12 items-center justify-evenly rounded-full"
           >
             {/* LISTO: Con Typescript, cuando alguno de los botones sea presionado, hacer lo siguiente:
              Cambiar className magnifying_glass a w-24
@@ -95,7 +95,7 @@ const Search: React.FC = () => {
             <img className="h-4 w-auto" src={magnifying_glass} alt="Buscar" />
             <p
               id="search-label"
-              className="hidden magnifying_glass-texto text-white font-semibold"
+              className="magnifying_glass-texto hidden font-semibold text-white"
             >
               Buscar
             </p>

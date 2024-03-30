@@ -5,9 +5,9 @@ import MainItem from "../components/mainitem";
 const ItemPage = () => {
   return (
     <div>
-      <Header showDetails={false}/>
-        <MainItem />
-        <FooterItem/>
+      <Header showDetails={false} />
+      <MainItem />
+      <FooterItem />
     </div>
   );
 };
