@@ -1,21 +1,57 @@
 import "../styles/footer.css";
 import arrowd from "../assets/svg_assets/arrow_do.svg";
 import FooterSection from "./footersection";
+import { useState } from "react";
+import arrowl from "../assets/svg_assets/arrow_le.svg";
+import arrowr from "../assets/svg_assets/arrow_ri.svg";
 
-const Footer: React.FC = () => {
+interface FooterProps {
+  elementsToShow: number;
+}
+
+const Footer: React.FC<FooterProps> = ({ elementsToShow }) => {
+  const [currentElementIndex, setCurrentElementIndex] = useState(0);
+  const [showLeftArrow, setShowLeftArrow] = useState(false);
+  const [showRightArrow, setShowRightArrow] = useState(true);
+
+  const handleNextClick = () => {
+    setCurrentElementIndex(currentElementIndex + 1);
+    setShowLeftArrow(true);
+    if (currentElementIndex + elementsToShow >= elements.length - 1) {
+      setShowRightArrow(false);
+    }
+  };
+
+  const handlePrevClick = () => {
+    setCurrentElementIndex(Math.max(0, currentElementIndex - 1));
+    setShowRightArrow(true);
+    if (currentElementIndex <= 1) {
+      setShowLeftArrow(false);
+    }
+  };
+
   const highlightText = (id: number) => {
-    const element = document.getElementById(`text-${id}`);
+    const element = document.getElementById(`element-text-${id}`);
     if (element) {
       element.classList.add("text-black", "font-semibold");
     }
   };
 
   const softenText = (id: number) => {
-    const element = document.getElementById(`text-${id}`);
+    const element = document.getElementById(`element-text-${id}`);
     if (element) {
       element.classList.remove("text-black", "font-semibold");
     }
   };
+  const elements = [
+    "Popular",
+    "Arte y cultura",
+    "Al aire libre",
+    "Montañas",
+    "Playa",
+    "Categorías",
+    "Actividades",
+  ];
 
   return (
     <footer className="bg-slate-50">
@@ -25,58 +61,50 @@ const Footer: React.FC = () => {
             Inspiración para escapadas futuras
           </p>
         </div>
-        <div className="mt-4 pb-5">
-          <ul className="flex list-none">
-            <li
-              className="mr-4 hover:cursor-pointer"
-              onMouseEnter={() => highlightText(1)}
-              onMouseLeave={() => softenText(1)}
-            >
-              <p id="text-1">Popular</p>
-            </li>
-            <li
-              className="mr-4 hover:cursor-pointer"
-              onMouseEnter={() => highlightText(2)}
-              onMouseLeave={() => softenText(2)}
-            >
-              <p id="text-2">Arte y cultura</p>
-            </li>
-            <li
-              className="mr-4 hover:cursor-pointer"
-              onMouseEnter={() => highlightText(3)}
-              onMouseLeave={() => softenText(3)}
-            >
-              <p id="text-3">Al aire libre</p>
-            </li>
-            <li
-              className="mr-4 hover:cursor-pointer"
-              onMouseEnter={() => highlightText(4)}
-              onMouseLeave={() => softenText(4)}
-            >
-              <p id="text-4">Montañas</p>
-            </li>
-            <li
-              className="mr-4 hover:cursor-pointer"
-              onMouseEnter={() => highlightText(5)}
-              onMouseLeave={() => softenText(5)}
-            >
-              <p id="text-5">Playa</p>
-            </li>
-            <li
-              className="mr-4 hover:cursor-pointer"
-              onMouseEnter={() => highlightText(6)}
-              onMouseLeave={() => softenText(6)}
-            >
-              <p id="text-6">Categorías</p>
-            </li>
-            <li
-              className="mr-4 hover:cursor-pointer"
-              onMouseEnter={() => highlightText(7)}
-              onMouseLeave={() => softenText(7)}
-            >
-              <p id="text-7">Actividades</p>
-            </li>
-          </ul>
+        <div className="mt-4 flex items-center pb-5">
+          <div className="mr-6 h-7 w-7 md:hidden">
+            {showLeftArrow && (
+              <button
+                className="flex h-7 w-7 items-center justify-center rounded-full border bg-white text-lg text-black hover:shadow-md"
+                onClick={handlePrevClick}
+              >
+                <img className="h-3 w-3" src={arrowl} alt="" />
+              </button>
+            )}
+          </div>
+
+          <div className="flex">
+            {elements
+              .slice(currentElementIndex, currentElementIndex + elementsToShow)
+              .map((_, index) => (
+                <div
+                  className="pr-6"
+                  key={index}
+                  onMouseEnter={() => highlightText(index)}
+                  onMouseLeave={() => softenText(index)}
+                >
+                  <button className="flex h-14 w-14 flex-col items-center justify-center px-4 hover:cursor-pointer">
+                    <p
+                      className="truncate pt-2 text-xs font-semibold"
+                      id={`element-text-${index}`}
+                    >
+                      {elements[currentElementIndex + index]}
+                    </p>
+                  </button>
+                </div>
+              ))}
+          </div>
+
+          <div className="h-7 w-7 md:hidden">
+            {showRightArrow && (
+              <button
+                className="flex h-7 w-7 items-center justify-center rounded-full border bg-white text-lg text-black hover:shadow-md"
+                onClick={handleNextClick}
+              >
+                <img className="h-3 w-3" src={arrowr} alt="" />
+              </button>
+            )}
+          </div>
         </div>
         <div>
           <hr />

@@ -1,63 +1,31 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "../styles/main.css";
 import Items from "../elements/items";
 import filter from "../assets/svg_assets/filter.svg";
 import List from "../elements/list";
 import check from "../assets/svg_assets/check.svg";
+interface MainProps {
+  elementsToShow: number;
+}
 
-const Main: React.FC = () => {
+const Main: React.FC<MainProps> = ({ elementsToShow }) => {
   const [activate, setActivate] = useState(false);
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const calculateElementCount = () => {
-    if (windowWidth >= 1200) {
-      return 7;
-    } else if (windowWidth >= 1000) {
-      return 5;
-    } else if (windowWidth >= 880) {
-      return 4;
-    } else if (windowWidth >= 768) {
-      return 3;
-    } else if (windowWidth >= 650) {
-      return 5;
-    } else if (windowWidth >= 512) {
-      return 4;
-    } else {
-      return 3;
-    }
-  };
-
-  const elementsToShow = calculateElementCount();
 
   const toggleActivate = () => {
     setActivate(!activate);
   };
-
   return (
     <main className="mx-8 mt-6 bg-white">
-      <div className="flex items-center justify-center pb-3 md:justify-between">
+      <div className="flex flex-col items-center justify-center pb-3 md:flex-row md:justify-between">
         <div>
           <List countElements={elementsToShow} />
         </div>
-        <div className="hidden md:flex">
-          <button className="hidden h-12 items-center rounded-xl border px-4 py-2 hover:border-black hover:bg-gray-100 md:flex">
+        <div className="flex">
+          <button className="mx-2 hidden h-12 items-center rounded-xl border px-4 py-2 hover:border-black hover:bg-gray-100 md:flex">
             <img className="h-6 w-6 pr-2" src={filter} alt="" />
             <span className="text-xs font-semibold text-black">Filtros</span>
           </button>
-
-          <div className="hidden h-12 items-center justify-between rounded-xl border px-4 py-2 hover:border-black hover:bg-gray-100 md:flex">
+          <div className="mt-4 flex rounded-xl border px-4 py-2 hover:border-black hover:bg-gray-100 md:mt-0 md:items-center md:justify-between">
             <span className="truncate pr-2 text-xs font-semibold text-black">
               Precio total sin impuestos
             </span>
@@ -84,7 +52,7 @@ const Main: React.FC = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-1 gap-1 pt-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid grid-cols-1 gap-1 pt-0 sm:grid-cols-2 md:grid-cols-3 md:pt-2 lg:grid-cols-4">
         <Items />
         <Items />
         <Items />

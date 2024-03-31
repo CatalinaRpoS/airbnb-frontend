@@ -148,6 +148,7 @@ const List: React.FC<ListProps> = ({ countElements }) => {
             </div>
           ))}
       </div>
+
       <div className="h-7 w-7">
         {showRightArrow && (
           <button
