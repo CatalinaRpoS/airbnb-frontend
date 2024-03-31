@@ -40,7 +40,7 @@ const MainItem: React.FC = () => {
         </div>
       </div>
       <PlaceImages />
-      <section className="mx-10 grid grid-cols-3 justify-around px-10 lg:px-8">
+      <section className="grid justify-around px-5 md:mx-10 md:grid-cols-3 md:px-10 lg:px-8">
         <div className="col-span-2">
           <div>
             <p className="text-2xl font-semibold">
@@ -56,6 +56,7 @@ const MainItem: React.FC = () => {
             <p className="pl-2 text-base font-semibold underline">1 reseña</p>
           </div>
           <hr className="mt-8" />
+
           <div className="flex items-center pt-8">
             <img
               className="h-10 w-10 rounded-full"
@@ -103,7 +104,7 @@ const MainItem: React.FC = () => {
             </div>
           </div>
           <hr className="mt-8" />
-          <p className="mt-8 w-5/6 text-base text-[#222222]">
+          <p className="mt-8 text-base text-[#222222] md:w-5/6">
             Casa Mulé está diseñada para combinar la naturaleza, el lujo y el
             confort ofreciendo una experiencia única, desde las impresionantes
             puestas de sol hasta la más relajante brisa del océano, disfrutando
@@ -111,7 +112,7 @@ const MainItem: React.FC = () => {
             atendidos por nuestro equipo para así tener una experiencia
             inolvidable.
           </p>
-          <p className="mt-6 text-base font-semibold text-[#222222]">
+          <p className="mt-6 hidden text-base font-semibold text-[#222222] lg:flex">
             El espacio...
           </p>
           <ShowMore />
@@ -119,7 +120,7 @@ const MainItem: React.FC = () => {
           <hr className="my-8" />
           <div>
             <p className="text-xl font-semibold">Lo que este lugar ofrece</p>
-            <div className="grid grid-cols-2">
+            <div className="grid md:grid-cols-2">
               <div className="col-span-1 w-2/3">
                 <div className="flex items-center pb-2 pt-6">
                   <img className="h-6 w-6" src={frame} alt="frame" />
@@ -155,7 +156,7 @@ const MainItem: React.FC = () => {
                   </p>
                 </div>
               </div>
-              <div className="col-span-1 w-2/3">
+              <div className="hidden w-2/3 md:col-span-1 md:grid">
                 <div className="flex items-center pb-2 pt-6">
                   <img className="h-6 w-6" src={frame} alt="frame" />
                   <p className="pl-6 text-base text-[#222222]">
@@ -212,34 +213,44 @@ const MainItem: React.FC = () => {
             La calificación promedio aparecerá después de 3 reseñas
           </p>
         </div>
-        <div className="flex items-center pt-8">
-          <img
-            className="h-12 w-12 rounded-full"
-            src={profile_photo}
-            alt="photo"
-          />
-          <div className="pl-3">
-            <p className="text-base font-semibold">Raffa</p>
-            <p className="text-sm text-[#717171]">Ocaña, Colombia</p>
+        <div className="mt-4 grid rounded-lg border p-4 shadow-lg md:rounded-none md:border-none md:p-0 md:shadow-none">
+          <div className="row-start-2 items-center pt-8 md:row-start-1">
+            <div className="flex">
+              <img
+                className="h-12 w-12 rounded-full"
+                src={profile_photo}
+                alt="photo"
+              />
+              <div className="pl-3">
+                <p className="text-base font-semibold">Raffa</p>
+                <p className="text-sm text-[#717171]">Ocaña, Colombia</p>
+              </div>
+            </div>
           </div>
-        </div>
-        <div className="mt-5">
-          <p className="flex items-center pb-2 text-sm">
-            <img className="h-2.5 w-2.5" src={star} alt="" />
-            <img className="h-2.5 w-2.5" src={star} alt="" />
-            <img className="h-2.5 w-2.5" src={star} alt="" />
-            <img className="h-2.5 w-2.5" src={star} alt="" />
-            <img className="h-2.5 w-2.5" src={star} alt="" />
-            <span> · </span> <p className="px-1 font-semibold">Hace 2 semana</p>
-            <span> · </span>
-            <p className="px-1 text-[#717171]">En grupo</p>
-          </p>
-        </div>
-        <div>
-          <p className="w-2/5 text-base">
-            lugar agradable para hospedarse, con mucha privacidad, tranquilidad
-            y personal atento a las necesidades del hospedero
-          </p>
+
+          <div className="row-start-1 md:row-start-2">
+            <div className="md:mt-5">
+              <p className="flex items-center pb-2 text-sm">
+                <img className="h-2.5 w-2.5" src={star} alt="" />
+                <img className="h-2.5 w-2.5" src={star} alt="" />
+                <img className="h-2.5 w-2.5" src={star} alt="" />
+                <img className="h-2.5 w-2.5" src={star} alt="" />
+                <img className="h-2.5 w-2.5" src={star} alt="" />
+                <span> · </span>{" "}
+                <p className="px-1 text-xs font-semibold md:text-sm">
+                  Hace 2 semana
+                </p>
+                <span className="hidden md:flex"> · </span>
+                <p className="hidden px-1 text-[#717171] md:flex">En grupo</p>
+              </p>
+            </div>
+            <div>
+              <p className="text-base lg:w-2/5">
+                lugar agradable para hospedarse, con mucha privacidad,
+                tranquilidad y personal atento a las necesidades del hospedero
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -258,37 +269,57 @@ const MainItem: React.FC = () => {
 
       <br />
       <hr className="mx-20 my-3" />
-      <section className="mx-10 grid grid-cols-3 justify-around p-10 lg:px-8">
-        <p className="col-span-3 pb-2 text-2xl font-semibold">
+      <section className="grid grid-cols-1 justify-around gap-4 p-6 md:grid-cols-3 md:p-10 lg:mx-10 lg:px-8">
+        <p className="hidden pb-2 text-2xl font-semibold md:row-start-1 md:grid">
           Lo que debes saber
         </p>
-        <div className="col-span-1">
-          <p className="py-2 text-base font-semibold">Reglas de la casa</p>
-          <p className="py-2 text-sm">El check-in es a partir de las 15:00</p>
-          <p className="py-2 text-sm">La salida es antes de las 11:00</p>
-          <p className="py-2 text-sm">Se admiten mascotas</p>
+        <div className="row-start-2 md:row-start-2">
+          <p className="pt-2 text-xl font-semibold md:text-base">
+            Reglas de la casa
+          </p>
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
+            El check-in es a partir de las 15:00
+          </p>
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
+            La salida es antes de las 11:00
+          </p>
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
+            Se admiten mascotas
+          </p>
           <ShowMore />
+          <hr className="mt-6 md:hidden" />
         </div>
-        <div className="col-span-1">
-          <p className="py-2 text-base font-semibold">Seguridad y propiedad</p>
-          <p className="py-2 text-sm">No hay alarma de monóxido de carbono</p>
-          <p className="py-2 text-sm">No hay alarma de humo</p>
-          <p className="py-2 text-sm">
+
+        <div className="row-start-3 md:row-start-2">
+          <p className="pt-2 text-xl font-semibold md:text-base">
+            Seguridad y propiedad
+          </p>
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
+            No hay alarma de monóxido de carbono
+          </p>
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
+            No hay alarma de humo
+          </p>
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
             Cámara de seguridad/dispositivo de grabación
           </p>
           <ShowMore />
         </div>
-        <div className="col-span-1">
-          <p className="py-2 text-base font-semibold">
+
+        <div className="row-start-1 md:row-start-2">
+          <p className="pt-2 text-xl font-semibold md:text-base">
             Política de cancelación
           </p>
-          <p className="py-2 text-sm">Cancelación gratuita por 48 horas.</p>
-          <p className="py-2 text-sm">
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
+            Cancelación gratuita por 48 horas.
+          </p>
+          <p className="py-2 text-sm text-[#717171] md:text-base md:text-black">
             Consulta la política de cancelación completa del anfitrión, que se
             aplica incluso si cancelas por problemas de salud, incluidos
             aquellos causados por la COVID-19.
           </p>
           <ShowMore />
+          <hr className="mt-6  md:hidden" />
         </div>
       </section>
     </main>
