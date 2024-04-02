@@ -43,7 +43,7 @@ const MainPage = () => {
 
   return (
     <div>
-      <Header showDetails={true} />
+      <Header showDetails={true} windowWidth={windowWidth} />
       <Main elementsToShow={elementsH} />
       <Footer elementsToShow={elementsF} />
     </div>

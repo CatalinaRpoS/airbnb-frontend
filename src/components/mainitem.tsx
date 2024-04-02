@@ -18,42 +18,66 @@ import ShowMore from "../elements/showmore";
 import PlaceImages from "../elements/placeimages";
 import MapContainer from "../elements/mapcontainer";
 
-const MainItem: React.FC = () => {
+interface MainItemsProps {
+  windowWidth: number;
+}
+
+const MainItem: React.FC<MainItemsProps> = ({ windowWidth }) => {
+  const images = [
+    "https://a0.muscache.com/im/pictures/miso/Hosting-1003548971445736385/original/defd5cac-2763-44d4-bbdd-9f7a59c2359d.jpeg?im_w=960",
+  ];
+
   return (
     <main className="text-black">
-      <div className="mx-20 my-3 flex items-center justify-between pt-3">
-        <div className="flex items-center">
-          <img className="h-6 w-6" src={translate} alt="traducir" />
-          <p className="pl-3 text-2xl font-semibold">
-            Casa de playa MULÉ + piscina
-          </p>
-        </div>
-        <div className="flex items-center justify-end">
-          <div className="flex items-center">
-            <img className="h-4 w-4" src={share} alt="compartir" />
-            <p className="pl-3 text-sm font-semibold underline">Compartir</p>
+      {windowWidth > 768 ? (
+        <>
+          <div className="mx-20 my-3 flex items-center justify-between pt-3">
+            <div className="flex items-center">
+              <img className="h-6 w-6" src={translate} alt="traducir" />
+              <p className="pl-3 text-2xl font-semibold">
+                Casa de playa MULÉ + piscina
+              </p>
+            </div>
+            <div className="flex items-center justify-end">
+              <div className="flex items-center">
+                <img className="h-4 w-4" src={share} alt="compartir" />
+                <p className="pl-3 text-sm font-semibold underline">
+                  Compartir
+                </p>
+              </div>
+              <div className="flex items-center pl-4">
+                <img className="h-4 w-4" src={save} alt="guardar" />
+                <p className="pl-2 text-sm font-semibold underline">Guardar</p>
+              </div>
+            </div>
           </div>
-          <div className="flex items-center pl-4">
-            <img className="h-4 w-4" src={save} alt="guardar" />
-            <p className="pl-2 text-sm font-semibold underline">Guardar</p>
-          </div>
+          <PlaceImages />
+        </>
+      ) : (
+        <div>
+          <img src={images[0]} alt="" />
         </div>
-      </div>
-      <PlaceImages />
+      )}
       <section className="grid justify-around px-5 md:mx-10 md:grid-cols-3 md:px-10 lg:px-8">
         <div className="col-span-2">
           <div>
-            <p className="text-2xl font-semibold">
+            <div className="mb-3 mt-6 flex items-center md:hidden">
+              <img className="h-6 w-6" src={translate} alt="traducir" />
+              <p className="pl-3 text-2xl font-semibold">
+                Casa de playa MULÉ + piscina
+              </p>
+            </div>
+            <p className="text-base font-semibold">
               Alojamiento entero en Santiago de Tolú, Colombia
             </p>
-            <p className="pb-2 text-base">
+            <p className="pb-2 text-sm">
               Más de 16 huéspedes <span>·</span> 5 habitaciones <span>·</span>{" "}
               14 camas <span>·</span> 4,5 baños
             </p>
           </div>
           <div className="flex items-center">
             <img className="h-3.5 w-3.5" src={star} alt="star" />
-            <p className="pl-2 text-base font-semibold underline">1 reseña</p>
+            <p className="pl-2 text-sm font-semibold underline">1 reseña</p>
           </div>
           <hr className="mt-8" />
 
@@ -205,8 +229,7 @@ const MainItem: React.FC = () => {
         </div>
       </section>
       <hr className="mx-20 my-3" />
-
-      <section className="mx-10 lg:px-8">
+      <section className="p-6 md:mx-10 md:p-0 lg:px-8">
         <div className="mt-12">
           <p className="text-2xl font-semibold">1 reseña</p>
           <p className="pt-2 text-sm text-[#717171]">
@@ -253,8 +276,7 @@ const MainItem: React.FC = () => {
           </div>
         </div>
       </section>
-
-      <section className="mx-10 lg:px-8">
+      <section className="p-6 md:mx-10 md:p-0 lg:px-8">
         <div className="mt-12">
           <p className="text-2xl font-semibold">A dónde irás</p>
           <p className="pt-2 text-sm text-[#717171]">
@@ -266,7 +288,6 @@ const MainItem: React.FC = () => {
         </div>
         <ShowMore />
       </section>
-
       <br />
       <hr className="mx-20 my-3" />
       <section className="grid grid-cols-1 justify-around gap-4 p-6 md:grid-cols-3 md:p-10 lg:mx-10 lg:px-8">

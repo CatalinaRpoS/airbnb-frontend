@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import "../styles/header.css";
 import HeaderSection from "./headermain";
 import Search from "../elements/search";
@@ -8,31 +7,34 @@ import world from "../assets/svg_assets/world.svg";
 import profile from "../assets/svg_assets/profile.svg";
 import strokes from "../assets/svg_assets/strokes.svg";
 import HeaderMobile from "./headermobile";
+import arrowl from "../assets/svg_assets/arrow_le.svg";
+import share from "../assets/svg_assets/share.svg";
+import save from "../assets/svg_assets/save.svg";
 
 interface HeaderProps {
   showDetails: boolean;
+  windowWidth: number;
 }
 
-const Header: React.FC<HeaderProps> = ({ showDetails }) => {
-  const [windowWidth, setWindowWidth] = useState<number>(window.innerWidth);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener("resize", handleResize);
-
-    return () => {
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
+const Header: React.FC<HeaderProps> = ({ showDetails, windowWidth }) => {
   return (
     <header className="bg-white">
-      {windowWidth <= 768 ? (
-        <HeaderMobile />
-      ) : (
+      {!showDetails && windowWidth <= 768 && (
+        <div className="flex items-center justify-between p-6">
+          <div className="flex justify-start">
+            <img className="mx-3 h-4 w-4" src={arrowl} alt="Alojamientos" />
+            <span className="text-sm font-semibold text-black">
+              Alojamientos
+            </span>
+          </div>
+          <div className="flex justify-end">
+            <img className="mx-3 h-4 w-4" src={share} alt="Compartir" />
+            <img className="h-4 w-4" src={save} alt="Guardar" />
+          </div>
+        </div>
+      )}
+      {showDetails && windowWidth <= 768 && <HeaderMobile />}
+      {windowWidth > 768 && (
         <nav
           className="flex p-4 md:flex-wrap md:justify-between lg:flex-row lg:items-center lg:px-8"
           aria-label="Global"
@@ -74,6 +76,7 @@ const Header: React.FC<HeaderProps> = ({ showDetails }) => {
           </div>
         </nav>
       )}
+
       {showDetails && windowWidth > 768 && (
         <>
           <Search />

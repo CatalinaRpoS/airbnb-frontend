@@ -8,7 +8,7 @@ const PlaceImages: React.FC = () => {
   ];
 
   return (
-    <div className="mx-20 my-5 grid h-72 grid-cols-4 grid-rows-2 gap-2">
+    <div className="my-5 grid h-72 grid-cols-4 grid-rows-2 gap-2 md:mx-10 lg:mx-20">
       <img
         src={images[0]}
         alt="Imagen 1"
